@@ -1,417 +1,341 @@
-# Week 1 - PHP Fundamentals Summary
+# 📚 Semaine 1 - Sommaire et Synthèse
 
-## 📚 Overview
-
-Welcome to Week 1 of PHP learning! This week covers the fundamental concepts of PHP programming, providing you with a solid foundation to build upon. By the end of this week, you'll understand the basics of PHP syntax, variables, data types, operators, and control structures.
-
----
-
-## 🎯 Learning Objectives
-
-By completing Week 1, you will be able to:
-
-- ✅ Understand what PHP is and how it works
-- ✅ Set up a PHP development environment
-- ✅ Write and execute basic PHP scripts
-- ✅ Work with variables and constants
-- ✅ Understand and use PHP data types (strings, integers, floats, booleans, arrays)
-- ✅ Perform operations using arithmetic, comparison, and logical operators
-- ✅ Implement conditional statements (if, else, elseif, switch)
-- ✅ Use loops effectively (for, while, do-while, foreach)
-- ✅ Handle user input and output
-- ✅ Debug basic PHP errors
+**Période** : Semaine 1  
+**Thème** : Introduction au PHP et bases de la programmation  
+**Durée totale** : 9 heures de cours (3 séances de 3h)
 
 ---
 
-## 📖 Lessons Overview
+## 🎯 Objectifs de la semaine
 
-### Lesson 1: Introduction to PHP
-- What is PHP?
-- PHP history and evolution
-- Server-side vs client-side scripting
-- Setting up your development environment (XAMPP, WAMP, or local server)
-- Your first PHP script: "Hello, World!"
-- PHP syntax basics and embedding PHP in HTML
+À la fin de cette première semaine, vous serez capable de :
 
-### Lesson 2: Variables and Data Types
-- Declaring variables in PHP
-- Variable naming conventions
-- PHP data types:
-  - String
-  - Integer
-  - Float (double)
-  - Boolean
-  - Array
-  - NULL
-- Type casting and type juggling
-- Constants (define() and const)
-
-### Lesson 3: Operators
-- Arithmetic operators (+, -, *, /, %, **)
-- Assignment operators (=, +=, -=, etc.)
-- Comparison operators (==, ===, !=, !==, <, >, <=, >=)
-- Logical operators (&&, ||, !)
-- Increment/Decrement operators (++, --)
-- String operators (., .=)
-
-### Lesson 4: Control Structures
-- Conditional statements:
-  - if statement
-  - if-else statement
-  - if-elseif-else statement
-  - switch statement
-  - Ternary operator
-- Best practices for writing conditions
-
-### Lesson 5: Loops
-- for loop
-- while loop
-- do-while loop
-- foreach loop (for arrays)
-- Loop control statements (break, continue)
-- Nested loops
+✅ Comprendre la différence entre web statique et web dynamique  
+✅ Installer et configurer un environnement de développement PHP  
+✅ Écrire des scripts PHP de base  
+✅ Manipuler des variables et différents types de données  
+✅ Utiliser les opérateurs arithmétiques, de comparaison et logiques  
+✅ Créer des structures conditionnelles (if/else, switch)  
+✅ Intégrer du PHP dans des pages HTML  
 
 ---
 
-## 🔑 Key Concepts Recap
+## 📅 Planning des séances
 
-### PHP Basics
+### 📘 [Lundi - Introduction au PHP](lundi-introduction-php.md)
+**Durée** : 3 heures
+
+#### Contenu
+- 🌐 Présentation du bootcamp et objectifs
+- 🔄 Web statique vs Web dynamique
+- 🐘 Rôle de PHP dans le développement web
+- 🛠️ Installation de l'environnement (XAMPP/WAMP/LAMP)
+- 🚀 Premier script PHP
+- 📝 Intégration HTML et PHP
+
+#### Compétences acquises
+- Installation d'un serveur local
+- Création de fichiers PHP
+- Utilisation de `echo` pour afficher du contenu
+- Compréhension du cycle requête/réponse
+
+#### Concepts clés
 ```php
 <?php
-// This is a single-line comment
-
-/*
- * This is a multi-line comment
- */
-
-// Every PHP statement ends with a semicolon
-echo "Hello, World!";
+echo "Bonjour tout le monde !";
 ?>
 ```
 
-### Variables and Data Types
+---
+
+### 📗 [Mercredi - Bases de PHP](mercredi-bases-php.md)
+**Durée** : 3 heures
+
+#### Contenu
+- ✍️ Syntaxe PHP (balises, commentaires, instructions)
+- 📦 Variables (déclaration, affectation, nommage)
+- 🎨 Types de données (string, int, float, boolean, null)
+- 🖨️ Différence entre `echo` et `print`
+- 🔗 Concaténation et interpolation
+- ⚙️ Opérateurs d'affectation combinés
+
+#### Compétences acquises
+- Déclarer et manipuler des variables
+- Comprendre les types de données
+- Convertir des types (casting)
+- Utiliser `var_dump()` pour déboguer
+- Effectuer des calculs mathématiques
+
+#### Concepts clés
 ```php
 <?php
-// Variables start with $
-$name = "John Doe";           // String
-$age = 25;                    // Integer
-$height = 1.75;               // Float
-$isStudent = true;            // Boolean
-$courses = ["PHP", "MySQL"];  // Array
+// Variables
+$nom = "Alice";
+$age = 25;
+$prix = 19.99;
+$estActif = true;
 
-// Constants
-define("PI", 3.14159);
-const SITE_NAME = "Learn PHP";
+// Affichage
+echo "Bonjour $nom, vous avez $age ans.";
+
+// Calculs
+$total = $prix * 2;
+$compteur++;
 ?>
 ```
 
-### Operators Examples
+---
+
+### 📙 [Jeudi - Logique de base](jeudi-logique-base.md)
+**Durée** : 3 heures
+
+#### Contenu
+- ⚙️ Opérateurs arithmétiques (+, -, *, /, %, **)
+- 🔍 Opérateurs de comparaison (==, ===, !=, !==, <, >, <=, >=)
+- 🧠 Opérateurs logiques (&&, ||, !)
+- 🔀 Structures conditionnelles (if/else/elseif)
+- 🎯 Structure switch/case
+- 🔄 Opérateur ternaire
+- 📊 Conditions multiples et imbriquées
+
+#### Compétences acquises
+- Comparer des valeurs
+- Prendre des décisions dans le code
+- Utiliser la logique booléenne
+- Créer des programmes interactifs
+- Choisir entre if et switch
+
+#### Concepts clés
 ```php
 <?php
-// Arithmetic
-$sum = 10 + 5;        // 15
-$product = 10 * 5;    // 50
-
-// Comparison
-$isEqual = (5 == "5");   // true (loose comparison)
-$isIdentical = (5 === "5"); // false (strict comparison)
-
-// Logical
-$result = (true && false);  // false
-$result = (true || false);  // true
-?>
-```
-
-### Control Structures
-```php
-<?php
-// If-else statement
+// Conditions
 if ($age >= 18) {
-    echo "Adult";
+    echo "Majeur";
 } else {
-    echo "Minor";
+    echo "Mineur";
 }
 
-// Switch statement
-switch ($grade) {
-    case "A":
-        echo "Excellent";
+// Switch
+switch ($jour) {
+    case "Lundi":
+        echo "Début de semaine";
         break;
-    case "B":
-        echo "Good";
+    case "Vendredi":
+        echo "Bientôt le weekend !";
         break;
     default:
-        echo "Keep trying";
+        echo "Un autre jour";
 }
+
+// Ternaire
+$statut = ($age >= 18) ? "Majeur" : "Mineur";
 ?>
 ```
 
-### Loops
+---
+
+## 📊 Récapitulatif des concepts
+
+### Syntaxe de base
 ```php
 <?php
-// For loop
-for ($i = 0; $i < 5; $i++) {
-    echo $i . " ";
-}
+// Commentaire sur une ligne
 
-// While loop
-$count = 0;
-while ($count < 5) {
-    echo $count . " ";
-    $count++;
-}
+/*
+   Commentaire
+   sur plusieurs lignes
+*/
 
-// Foreach loop
-$fruits = ["Apple", "Banana", "Orange"];
-foreach ($fruits as $fruit) {
-    echo $fruit . " ";
-}
+echo "Affichage";  // Instruction terminée par ;
 ?>
 ```
 
----
+### Variables et types
+| Type | Exemple | Utilisation |
+|------|---------|-------------|
+| String | `$nom = "Alice";` | Texte |
+| Integer | `$age = 25;` | Nombre entier |
+| Float | `$prix = 19.99;` | Nombre décimal |
+| Boolean | `$actif = true;` | Vrai/Faux |
+| NULL | `$valeur = null;` | Absence de valeur |
 
-## 🎓 Global Exercise: Student Grade Evaluation System
+### Opérateurs principaux
+| Catégorie | Opérateurs | Exemple |
+|-----------|-----------|---------|
+| Arithmétiques | `+ - * / % **` | `$a + $b` |
+| Comparaison | `== === != !== < > <= >=` | `$a === $b` |
+| Logiques | `&& || !` | `$a && $b` |
+| Affectation | `= += -= *= /= ++ --` | `$a += 5` |
 
-### Project Description
-Create a comprehensive PHP application that evaluates student grades based on their scores across multiple subjects. This project combines all the concepts learned in Week 1.
-
-### Requirements
-
-#### Part 1: Student Information
-Create variables to store the following student information:
-- Student name
-- Student ID
-- Class/Grade level
-- Academic year
-
-#### Part 2: Subject Scores
-Store scores for at least 5 subjects in an array:
-- Mathematics
-- English
-- Science
-- History
-- Physical Education
-
-Each score should be between 0 and 100.
-
-#### Part 3: Calculations
-Implement the following calculations:
-1. **Total Score**: Sum of all subject scores
-2. **Average Score**: Total score divided by number of subjects
-3. **Percentage**: (Total score / Maximum possible score) × 100
-
-#### Part 4: Grade Assignment
-Assign a letter grade based on the average score:
-- A: 90-100
-- B: 80-89
-- C: 70-79
-- D: 60-69
-- F: Below 60
-
-#### Part 5: Status Determination
-Determine the student's status:
-- **Pass**: Average score >= 60
-- **Fail**: Average score < 60
-- **Honor Roll**: Average score >= 90
-- **Needs Improvement**: Average score < 70
-
-#### Part 6: Report Generation
-Display a formatted report that includes:
-- Student information
-- List of subjects with scores
-- Total score and average
-- Letter grade
-- Pass/Fail status
-- Additional comments based on performance
-
-### Sample Solution Structure
-
+### Structures de contrôle
 ```php
-<?php
-// ==========================================
-// STUDENT GRADE EVALUATION SYSTEM
-// ==========================================
-
-// Part 1: Student Information
-$studentName = "Alice Johnson";
-$studentId = "STU2026001";
-$classLevel = "Grade 10";
-$academicYear = "2025-2026";
-
-// Part 2: Subject Scores
-$subjects = [
-    "Mathematics" => 85,
-    "English" => 92,
-    "Science" => 78,
-    "History" => 88,
-    "Physical Education" => 95
-];
-
-// Part 3: Calculations
-$totalScore = 0;
-$numberOfSubjects = count($subjects);
-
-// Calculate total score
-foreach ($subjects as $subject => $score) {
-    $totalScore += $score;
-}
-
-$averageScore = $totalScore / $numberOfSubjects;
-$maxPossibleScore = $numberOfSubjects * 100;
-$percentage = ($totalScore / $maxPossibleScore) * 100;
-
-// Part 4: Grade Assignment
-if ($averageScore >= 90) {
-    $letterGrade = "A";
-    $gradeComment = "Excellent";
-} elseif ($averageScore >= 80) {
-    $letterGrade = "B";
-    $gradeComment = "Good";
-} elseif ($averageScore >= 70) {
-    $letterGrade = "C";
-    $gradeComment = "Satisfactory";
-} elseif ($averageScore >= 60) {
-    $letterGrade = "D";
-    $gradeComment = "Needs Improvement";
+// if/else
+if (condition) {
+    // code
 } else {
-    $letterGrade = "F";
-    $gradeComment = "Failing";
+    // code alternatif
 }
 
-// Part 5: Status Determination
-$status = ($averageScore >= 60) ? "PASS" : "FAIL";
-$isHonorRoll = ($averageScore >= 90) ? true : false;
-$needsImprovement = ($averageScore < 70) ? true : false;
-
-// Part 6: Report Generation
-echo "==============================================\n";
-echo "       STUDENT GRADE EVALUATION REPORT        \n";
-echo "==============================================\n\n";
-
-echo "Student Information:\n";
-echo "--------------------\n";
-echo "Name: $studentName\n";
-echo "Student ID: $studentId\n";
-echo "Class: $classLevel\n";
-echo "Academic Year: $academicYear\n\n";
-
-echo "Subject Scores:\n";
-echo "--------------------\n";
-foreach ($subjects as $subject => $score) {
-    echo sprintf("%-25s: %3d/100\n", $subject, $score);
+// switch
+switch ($variable) {
+    case valeur1:
+        // code
+        break;
+    case valeur2:
+        // code
+        break;
+    default:
+        // code par défaut
 }
-
-echo "\nPerformance Summary:\n";
-echo "--------------------\n";
-echo "Total Score: $totalScore / $maxPossibleScore\n";
-echo "Average Score: " . round($averageScore, 2) . "\n";
-echo "Percentage: " . round($percentage, 2) . "%\n";
-echo "Letter Grade: $letterGrade ($gradeComment)\n";
-echo "Status: $status\n";
-
-if ($isHonorRoll) {
-    echo "\n🏆 CONGRATULATIONS! Student is on the Honor Roll!\n";
-}
-
-if ($needsImprovement) {
-    echo "\n⚠️  Student needs additional support and tutoring.\n";
-}
-
-echo "\nAdditional Comments:\n";
-echo "--------------------\n";
-if ($averageScore >= 90) {
-    echo "Outstanding performance! Keep up the excellent work!\n";
-} elseif ($averageScore >= 80) {
-    echo "Great job! Continue to strive for excellence.\n";
-} elseif ($averageScore >= 70) {
-    echo "Good effort. Focus on improving weaker subjects.\n";
-} elseif ($averageScore >= 60) {
-    echo "You're passing, but there's significant room for improvement.\n";
-} else {
-    echo "Immediate attention required. Please meet with advisor.\n";
-}
-
-echo "\n==============================================\n";
-?>
 ```
 
-### Extension Challenges
+---
 
-Once you've completed the basic requirements, try these additional challenges:
+## 🎓 Compétences maîtrisées
 
-1. **Subject-wise Analysis**: Identify the highest and lowest scoring subjects
-2. **Multiple Students**: Modify the code to handle an array of multiple students
-3. **Grade Distribution**: Count how many subjects fall into each grade category
-4. **Weighted Scores**: Assign different weights to different subjects
-5. **Interactive Input**: Use HTML forms to accept user input (requires basic HTML knowledge)
-6. **Data Validation**: Add checks to ensure scores are between 0 and 100
-7. **Trend Analysis**: Compare current performance with previous semester (add historical data)
+Après cette semaine, vous savez :
 
-### Testing Your Solution
+### Environnement de développement
+- ✅ Installer XAMPP/WAMP/LAMP
+- ✅ Démarrer Apache et MySQL
+- ✅ Créer des fichiers dans `htdocs`
+- ✅ Accéder aux fichiers via `localhost`
+- ✅ Utiliser VS Code avec les extensions PHP
 
-Test your code with different scenarios:
-- All subjects with perfect scores (100)
-- All subjects with failing scores (below 60)
-- Mixed scores across the grade spectrum
-- Edge cases (exactly 60, exactly 90, etc.)
+### Syntaxe PHP
+- ✅ Ouvrir et fermer des balises PHP
+- ✅ Écrire des commentaires
+- ✅ Terminer les instructions avec `;`
+- ✅ Respecter la sensibilité à la casse
+
+### Manipulation de données
+- ✅ Déclarer des variables
+- ✅ Assigner des valeurs
+- ✅ Changer le type d'une variable
+- ✅ Effectuer des calculs
+- ✅ Concaténer des chaînes
+
+### Logique de programmation
+- ✅ Comparer des valeurs
+- ✅ Utiliser des conditions
+- ✅ Combiner plusieurs conditions
+- ✅ Choisir entre plusieurs options
+- ✅ Créer des programmes qui prennent des décisions
 
 ---
 
-## 💡 Tips for Success
+## 🔑 Points clés à retenir
 
-1. **Practice Daily**: Write code every day, even if it's just for 30 minutes
-2. **Experiment**: Don't be afraid to modify examples and see what happens
-3. **Debug**: Use `var_dump()` and `print_r()` to understand what your code is doing
-4. **Comment Your Code**: Explain what each section does
-5. **Follow Conventions**: Use consistent naming conventions and formatting
-6. **Read Error Messages**: PHP error messages are helpful - learn to read them
-7. **Test Incrementally**: Test your code after adding each new feature
+### Les essentiels
+1. **Toutes les variables commencent par `$`**
+2. **Utilisez `===` au lieu de `==`** (comparaison stricte)
+3. **Chaque instruction se termine par `;`**
+4. **PHP est sensible à la casse pour les variables**
+5. **Commentez votre code pour le rendre compréhensible**
+6. **`var_dump()` est votre meilleur ami pour déboguer**
 
----
-
-## 📝 Additional Practice Exercises
-
-1. **Temperature Converter**: Convert between Celsius, Fahrenheit, and Kelvin
-2. **Simple Calculator**: Perform basic arithmetic operations based on user choice
-3. **Number Guessing Game**: Generate a random number and provide hints
-4. **Shopping Cart**: Calculate total price with discounts and tax
-5. **BMI Calculator**: Calculate and categorize Body Mass Index
+### Erreurs courantes à éviter
+❌ Oublier le `$` devant une variable  
+❌ Oublier le `;` en fin d'instruction  
+❌ Confondre `=` (affectation) et `==` (comparaison)  
+❌ Oublier les `break` dans un `switch`  
+❌ Utiliser `==` au lieu de `===`  
+❌ Accéder aux fichiers PHP sans passer par `localhost`  
 
 ---
 
-## 🔗 Resources
+## 💡 Conseils pour progresser
 
-- [PHP Official Documentation](https://www.php.net/manual/en/)
-- [W3Schools PHP Tutorial](https://www.w3schools.com/php/)
-- [PHP The Right Way](https://phptherightway.com/)
-- [PHP Tutorial for Beginners](https://www.php.net/manual/en/getting-started.php)
+### Pratique quotidienne
+- 📝 Codez tous les jours, même 30 minutes
+- 🔄 Refaites les exercices sans regarder les solutions
+- 🎯 Créez vos propres petits projets
+- 🤔 Essayez de résoudre des problèmes différemment
 
----
+### Ressources utiles
+- 📖 Documentation officielle PHP : https://www.php.net/manual/fr/
+- 🛠️ PHP Sandbox : https://sandbox.onlinephpfunctions.com/
+- 💬 Stack Overflow : https://stackoverflow.com/questions/tagged/php
+- 🎥 Tutoriels YouTube en français
 
-## ✅ Week 1 Checklist
-
-Before moving to Week 2, ensure you can:
-- [ ] Write and execute basic PHP scripts
-- [ ] Declare and use variables correctly
-- [ ] Work with different data types
-- [ ] Use operators effectively
-- [ ] Implement if-else statements
-- [ ] Use switch statements appropriately
-- [ ] Write all types of loops
-- [ ] Complete the Student Grade Evaluation System project
-- [ ] Understand and fix common PHP errors
+### Débogage
+- Utilisez `var_dump()` pour voir le contenu des variables
+- Utilisez `echo` pour tracer le flux d'exécution
+- Lisez attentivement les messages d'erreur
+- Testez votre code par petites parties
 
 ---
 
-## 🎉 Congratulations!
+## 🏆 Exercice global de la semaine
 
-You've completed Week 1 of PHP fundamentals! You now have a solid foundation in PHP basics. Keep practicing, and get ready for Week 2 where we'll dive into functions, arrays manipulation, and more advanced concepts.
+### 🎯 Mini-projet : Système de notation d'élèves
 
-**Next Week Preview**: Functions, Advanced Arrays, String Manipulation, and Form Handling
+**Objectif** : Créer un système complet qui calcule et affiche les résultats d'un élève.
+
+#### Cahier des charges
+
+Créez un fichier `evaluation_eleve.php` qui :
+
+1. **Définit les informations de l'élève**
+   - Nom et prénom
+   - Classe
+   - 5 notes de matières différentes (Maths, Français, Histoire, Anglais, Sciences)
+
+2. **Calcule automatiquement**
+   - La moyenne générale
+   - La note la plus haute
+   - La note la plus basse
+
+3. **Détermine**
+   - La mention (selon le barème ci-dessous)
+   - Si l'élève est admis (moyenne >= 10) ou recalé
+
+4. **Affiche un bulletin scolaire complet** avec :
+   - Informations de l'élève
+   - Toutes les notes
+   - Les statistiques (moyenne, max, min)
+   - La mention et le résultat (admis/recalé)
+   - Un message personnalisé selon la mention
+
+#### Barème des mentions
+- **Très bien** : moyenne >= 16
+- **Bien** : moyenne >= 14
+- **Assez bien** : moyenne >= 12
+- **Passable** : moyenne >= 10
+- **Insuffisant** : moyenne < 10
+
+#### Messages personnalisés
+- Très bien : "Félicitations ! Excellent travail !"
+- Bien : "Très bon travail, continuez ainsi !"
+- Assez bien : "Bon travail, vous pouvez faire encore mieux !"
+- Passable : "Résultat acceptable, mais des efforts sont nécessaires."
+- Insuffisant : "Résultat insuffisant, il faut redoubler d'efforts."
 
 ---
 
-*Created: 2026-01-11*  
-*Repository: HermesOliho/learn-php*  
-*Author: HermesOliho*
+### 💪 Défis supplémentaires (optionnels)
+
+Si vous voulez aller plus loin :
+
+1. **Niveau 1** : Ajouter des coefficients aux matières
+2. **Niveau 2** : Gérer plusieurs élèves
+3. **Niveau 3** : Ajouter des appréciations par matière
+4. **Niveau 4** : Créer un classement
+
+---
+
+## 📅 Prochaine étape : Semaine 2
+
+La semaine prochaine, nous aborderons :
+
+- 🔄 **Lundi** : Les boucles (for, while, foreach)
+- 📊 **Mercredi** : Les tableaux (indexés et associatifs)
+- 🧰 **Jeudi** : Les fonctions PHP
+
+---
+
+## 🎉 Félicitations !
+
+Vous avez terminé la première semaine du bootcamp ! 
+
+**Bon courage pour la suite ! 💪**
