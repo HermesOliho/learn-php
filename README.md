@@ -1,233 +1,110 @@
-# 🚀 Bootcamp PHP & Laravel - Learn PHP
+# 🎓 Bootcamp PHP & Laravel
 
-Bienvenue dans le bootcamp PHP & Laravel ! Ce programme intensif de 2 à 3 mois vous permettra de maîtriser le développement web backend avec PHP et le framework Laravel.
+Bienvenue dans ce bootcamp complet de développement PHP et Laravel ! Ce programme intensif de 2 à 3 mois vous permettra de passer de débutant à développeur capable de créer des applications web complètes.
 
-## 📋 À propos du Bootcamp
+## 📋 À propos
 
-### Public cible
-- Débutants en PHP ayant des bases en HTML & CSS
-- Développeurs souhaitant se spécialiser en backend PHP
+Ce repository contient tous les supports, exercices et projets du bootcamp PHP & Laravel. Le programme est conçu pour des débutants ayant déjà des bases en HTML et CSS.
 
-### Durée
-**8 à 12 semaines** (2 à 3 mois)
+## 🎯 Objectifs du bootcamp
 
-### Rythme d'apprentissage
-- **Cours** : Lundi, Mercredi, Jeudi (3h par séance)
-- **Travaux pratiques (TP)** : Mardi, Vendredi, Week-end
+À la fin de cette formation, vous serez capable de :
 
-### Objectif final
-Être capable de développer une application web complète avec **Laravel + MySQL**, incluant :
-- Authentification utilisateur
-- Opérations CRUD
-- Relations entre tables
-- Déploiement basique
+- ✅ Maîtriser les bases de **PHP procédural et orienté objet**
+- ✅ Manipuler des formulaires et gérer des données
+- ✅ Interagir avec une base de données **MySQL**
+- ✅ Comprendre et appliquer le modèle **MVC**
+- ✅ Développer une application complète avec **Laravel** (authentification, CRUD, relations, déploiement)
 
----
+## 📅 Structure du programme
 
-## 🎯 Objectifs pédagogiques
+### Durée : 8 à 12 semaines
 
-À la fin du bootcamp, vous serez capable de :
+**Rythme hebdomadaire :**
+- 📚 **Cours** : Lundi, Mercredi, Jeudi (3h par séance)
+- 💻 **Travaux pratiques** : Mardi, Vendredi, Week-end
 
-✅ Comprendre les bases solides de **PHP procédural et orienté objet**  
-✅ Manipuler des formulaires et des données  
-✅ Interagir avec une base de données MySQL  
-✅ Comprendre et appliquer le modèle **MVC**  
-✅ Créer une application complète avec **Laravel**  
-✅ Implémenter l'authentification et les autorisations  
-✅ Gérer les relations entre entités (Eloquent ORM)  
-✅ Déployer une application basique  
+### 🗓️ Programme détaillé
 
----
+#### Phase 1 : Bases du Web Dynamique & PHP (Semaines 1-4)
+- **Semaine 1** : Introduction au web dynamique & PHP
+- **Semaine 2** : Structures de contrôle & formulaires
+- **Semaine 3** : Fonctions & PHP avancé
+- **Semaine 4** : PHP & MySQL (PDO)
 
-## 📚 Programme de formation
+#### Phase 2 : Programmation Orientée Objet & MVC (Semaines 5-6)
+- **Semaine 5** : PHP Orienté Objet
+- **Semaine 6** : Architecture MVC & sécurité
 
-### 🔹 PHASE 1 : Bases du Web Dynamique & PHP (Semaines 1 à 4)
+#### Phase 3 : Laravel (Semaines 7-11)
+- **Semaine 7** : Introduction à Laravel
+- **Semaine 8** : Routing, Controllers & Views
+- **Semaine 9** : Base de données avec Eloquent
+- **Semaine 10** : Authentification & formulaires
+- **Semaine 11** : Projet final
 
-#### Semaine 1 – Introduction au Web dynamique & PHP
-- Web statique vs Web dynamique
-- Installation de l'environnement (XAMPP/WAMP/LAMP)
-- Premier script PHP
-- Variables et types de données
+#### Semaine 12 (optionnelle)
+- Finalisation & évaluation des projets
 
-#### Semaine 2 – Structures de contrôle & formulaires
-- Conditions et boucles
-- Tableaux (simples et associatifs)
-- Formulaires HTML + PHP (GET & POST)
-- **TP** : Formulaire de contact, calculatrice
+## 🚀 Projets
 
-#### Semaine 3 – Fonctions & PHP avancé
-- Fonctions personnalisées
-- Fonctions natives PHP
-- Inclusion de fichiers (include, require)
-- **TP** : Mini-site dynamique
+### Projet fil rouge recommandé : Gestion d'utilisateurs
 
-#### Semaine 4 – PHP & MySQL (PDO)
-- Introduction aux bases de données
-- Connexion PHP ↔ MySQL avec PDO
-- Requêtes CRUD (Create, Read, Update, Delete)
-- **TP** : Système d'inscription et CRUD utilisateurs
+Un projet qui évolue tout au long du bootcamp :
+1. **Phase PHP** : Formulaire d'inscription simple
+2. **PHP + MySQL** : CRUD utilisateurs complet
+3. **PHP POO & MVC** : Architecture propre et sécurisée
+4. **Laravel** : Application complète avec authentification et rôles
 
----
+### Autres projets possibles
+- 📝 Blog dynamique avec système de commentaires
+- ✅ Application de gestion de tâches (Todo App)
+- 📅 Système de réservation simple
 
-### 🔹 PHASE 2 : Programmation Orientée Objet & MVC (Semaines 5 et 6)
+## 🛠️ Prérequis
 
-#### Semaine 5 – PHP Orienté Objet
-- Classes et objets
-- Constructeurs et héritage
-- Encapsulation et namespaces
-- **TP** : Refonte du CRUD en POO
+- Connaissances de base en **HTML** et **CSS**
+- Un ordinateur avec :
+  - XAMPP/WAMP/LAMP installé
+  - Un éditeur de code (VS Code recommandé)
+  - Composer (pour Laravel)
 
-#### Semaine 6 – Architecture MVC & sécurité
-- Principe MVC (Model-View-Controller)
-- Organisation d'un mini framework maison
-- Sécurité : XSS, SQL Injection, hash de mots de passe
-- **TP** : Mini-projet MVC en PHP pur
+## 📚 Ressources
 
----
+Consultez le fichier [`planification_bootcamp_php_laravel_2_3_mois.md`](planification_bootcamp_php_laravel_2_3_mois.md) pour le détail complet de chaque séance.
 
-### 🔹 PHASE 3 : Laravel (Semaines 7 à 11)
+## 💡 Conseils pour réussir
 
-#### Semaine 7 – Introduction à Laravel
-- Présentation du framework
-- Installation avec Composer
-- Structure d'un projet Laravel
+- 🎯 **Pratiquez régulièrement** : Le code s'apprend en codant !
+- 🔍 **Faites des code reviews** : Relisez et commentez votre code
+- 🌱 **Utilisez Git/GitHub** : Versionnez tous vos projets
+- 🤝 **Collaborez** : Travaillez en équipe quand c'est possible
+- ❓ **Posez des questions** : Il n'y a pas de question bête !
 
-#### Semaine 8 – Routing, Controllers & Views
-- Système de routing
-- Controllers
-- Blade Templates
-- **TP** : Pages dynamiques avec Blade
-
-#### Semaine 9 – Base de données avec Eloquent
-- Migrations
-- Models & Eloquent ORM
-- Relations entre tables (one-to-many, etc.)
-- **TP** : CRUD complet avec Laravel
-
-#### Semaine 10 – Authentification & formulaires
-- Système d'authentification Laravel
-- Validation des formulaires
-- Middleware et protection des routes
-- **TP** : Système de login/register
-
-#### Semaine 11 – Projet final
-- Architecture & bonnes pratiques
-- Développement du projet final
-- Déploiement basique
-
----
-
-### 🏁 Semaine 12 (optionnelle) – Finalisation & évaluation
-- Corrections et améliorations
-- Présentations des projets
-- Feedback collectif
-
----
-
-## 🧩 Projets fil rouge
-
-Un **projet fil rouge** est développé tout au long du bootcamp, évoluant à chaque phase :
-
-### 🟢 Projet recommandé : Gestion d'utilisateurs
-Application complète de gestion d'utilisateurs (type back-office)
-
-**Évolution du projet :**
-- **Phase 1** : Inscription avec validation
-- **Phase 2** : CRUD utilisateurs + base de données
-- **Phase 3** : Architecture MVC + POO
-- **Phase 4** : Laravel avec authentification, middleware, pagination
-
-### Autres projets possibles :
-- 🟡 **Blog dynamique** : Articles, commentaires, gestion admin
-- 🔵 **Todo App** : Gestion de tâches personnelles
-- 🟣 **Système de réservation** : Réservation de créneaux avec gestion admin
-
----
-
-## 💻 Prérequis techniques
-
-### Connaissances
-- HTML5 & CSS3
-- Bases de la programmation (recommandé mais non obligatoire)
-
-### Environnement de développement
-- **XAMPP** / **WAMP** / **LAMP** (Apache, MySQL, PHP)
-- **Composer** (gestionnaire de dépendances PHP)
-- **Git** & **GitHub** (gestion de versions)
-- Éditeur de code : **VS Code** (recommandé)
-
----
-
-## 📁 Structure du repository
+## 📖 Structure du repository
 
 ```
 learn-php/
-├── phase-1-bases-php/          # Semaines 1-4
-├── phase-2-poo-mvc/            # Semaines 5-6
-├── phase-3-laravel/            # Semaines 7-11
-├── projets/                    # Projets fil rouge
-├── ressources/                 # Documentation et ressources
-└── planification_bootcamp_php_laravel_2_3_mois.md
+├── README.md
+├── planification_bootcamp_php_laravel_2_3_mois.md
+├── semaine-01/
+├── semaine-02/
+├── ...
+└── projet-final/
 ```
 
----
+## 🎓 Certification
 
-## 🚀 Comment démarrer
+Les projets sont évalués sur la base de :
+- Fonctionnalités implémentées
+- Qualité du code
+- Sécurité
+- Bonnes pratiques
 
-1. **Cloner le repository**
-   ```bash
-   git clone https://github.com/HermesOliho/learn-php.git
-   cd learn-php
-   ```
+## 📞 Contact & Support
 
-2. **Installer l'environnement**
-   - Télécharger et installer [XAMPP](https://www.apachefriends.org/)
-   - Démarrer Apache et MySQL
-
-3. **Suivre la progression**
-   - Consulter le fichier de planification détaillée
-   - Suivre les cours dans l'ordre
-   - Réaliser tous les TP
-
-4. **Pour Laravel (Phase 3)**
-   ```bash
-   composer install
-   php artisan serve
-   ```
+Pour toute question ou assistance, n'hésitez pas à ouvrir une issue dans ce repository.
 
 ---
 
-## 🧠 Conseils pédagogiques
-
-✨ **Pratique intensive** : Codez tous les jours  
-✨ **Code review** : Relisez votre code régulièrement  
-✨ **Git/GitHub** : Commitez fréquemment vos progrès  
-✨ **Projets** : L'évaluation se fait par projet, pas par théorie  
-✨ **Communauté** : N'hésitez pas à poser des questions  
-
----
-
-## 📖 Ressources complémentaires
-
-- [Documentation PHP officielle](https://www.php.net/manual/fr/)
-- [Documentation Laravel](https://laravel.com/docs)
-- [PHP The Right Way](https://phptherightway.com/)
-- [Laracasts](https://laracasts.com/) (tutoriels Laravel)
-
----
-
-## 📞 Contact
-
-Pour toute question concernant le bootcamp :
-- **GitHub** : [@HermesOliho](https://github.com/HermesOliho)
-- **Issues** : Ouvrez une issue sur ce repository
-
----
-
-## 📜 Licence
-
-Ce projet éducatif est ouvert à tous. N'hésitez pas à le forker et à l'adapter à vos besoins !
-
----
-
-**Bon courage dans votre apprentissage ! 💪🚀**
+**Bon courage et bon apprentissage ! 🚀**
