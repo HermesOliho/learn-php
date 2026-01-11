@@ -1,16 +1,43 @@
-# Mercredi - Les Bases de PHP
+# 📘 Semaine 1 - Mercredi : Bases de PHP
 
-## 📚 Objectifs du jour
-- Comprendre la syntaxe de base de PHP
-- Maîtriser les variables et leurs types
-- Différencier `echo` et `print`
-- Pratiquer avec des exercices guidés
+**Durée** : 3 heures  
+**Objectif** : Maîtriser la syntaxe PHP, les variables et les types de données
 
 ---
 
-## 1. Syntaxe de Base PHP
+## 📋 Plan de la séance
 
-### Structure d'un fichier PHP
+1. Rappel et questions (15 min)
+2. Syntaxe PHP en détail (30 min)
+3. Variables en PHP (45 min)
+4. Types de données (30 min)
+5. echo vs print (15 min)
+6. Exercices guidés (30 min)
+7. Synthèse et devoirs (15 min)
+
+---
+
+## 🔄 1. Rappel de la séance précédente
+
+### Quiz rapide
+
+**Question 1** : Où doit-on placer nos fichiers PHP ?  
+**Réponse** : Dans le dossier `htdocs` (ou équivalent)
+
+**Question 2** : Comment ouvre-t-on un bloc de code PHP ?  
+**Réponse** : Avec `<?php`
+
+**Question 3** : Comment affiche-t-on du texte en PHP ?  
+**Réponse** : Avec `echo` ou `print`
+
+**Question 4** : Comment accède-t-on à nos fichiers PHP ?  
+**Réponse** : Via `http://localhost/nom-du-fichier.php`
+
+---
+
+## ✍️ 2. Syntaxe PHP en détail
+
+### 🔹 Structure de base
 
 ```php
 <?php
@@ -18,440 +45,882 @@
 ?>
 ```
 
-### Points importants :
-- **Balises d'ouverture** : `<?php` (toujours obligatoire)
-- **Balises de fermeture** : `?>` (optionnel si le fichier contient uniquement du PHP)
-- **Point-virgule** : Chaque instruction se termine par `;`
-- **Commentaires** :
-  ```php
-  // Commentaire sur une ligne
-  
-  /* Commentaire
-     sur plusieurs
-     lignes */
-  
-  # Commentaire style shell (moins utilisé)
-  ```
+**Règles importantes :**
 
-### Exemple de base
-```php
-<?php
-echo "Bonjour, monde!";
-// Pas besoin de ?> à la fin si c'est du PHP pur
-```
+1. **Balises PHP** : Le code PHP doit être entre `<?php` et `?>`
+2. **Point-virgule** : Chaque instruction se termine par `;`
+3. **Sensibilité à la casse** : 
+   - Les mots-clés (`echo`, `if`, `while`) ne sont PAS sensibles à la casse
+   - Les variables (`$nom`, `$Nom`) SONT sensibles à la casse
+4. **Espaces** : PHP ignore les espaces multiples et les sauts de ligne
 
 ---
 
-## 2. Variables en PHP
+### 🔹 Commentaires en PHP
 
-### Déclaration et règles
+Les commentaires permettent de documenter votre code. Ils ne sont pas exécutés.
 
 ```php
 <?php
-$nom = "Alice";           // Variable texte
-$age = 25;                // Variable nombre entier
-$prix = 19.99;            // Variable nombre décimal
-$estActif = true;         // Variable booléenne
+
+// Ceci est un commentaire sur une ligne
+
+# Ceci est aussi un commentaire sur une ligne
+
+/*
+   Ceci est un commentaire
+   sur plusieurs lignes
+   Très utile pour des explications longues
+*/
+
+echo "Bonjour"; // Commentaire en fin de ligne
+
+?>
 ```
 
-### Règles de nommage :
-- ✅ Commence par `$`
-- ✅ Suivi d'une lettre ou underscore `_`
-- ✅ Peut contenir lettres, chiffres, underscores
-- ❌ Sensible à la casse (`$nom` ≠ `$Nom`)
-- ❌ Pas d'espaces ni de caractères spéciaux
+**Pourquoi commenter ?**
+- ✅ Expliquer votre logique
+- ✅ Aider les autres développeurs (ou vous-même plus tard)
+- ✅ Désactiver temporairement du code
+- ✅ Documenter les fonctions complexes
 
-### Conventions de nommage
-
+**Bonnes pratiques :**
 ```php
 <?php
-// Camel Case (recommandé)
-$nomComplet = "Jean Dupont";
-$nombreDeVisiteurs = 150;
+// ✅ BON : Commentaire clair et utile
+// Calcul du prix TTC avec une TVA de 20%
+$prixTTC = $prixHT * 1.20;
 
-// Snake Case (alternative)
-$nom_complet = "Jean Dupont";
-$nombre_de_visiteurs = 150;
-```
-
----
-
-## 3. Types de Données
-
-### Types Scalaires
-
-#### String (Chaîne de caractères)
-```php
-<?php
-$simple = 'Texte simple';
-$double = "Texte avec $simple";  // Interpolation possible
-$concat = 'Bonjour' . ' ' . 'monde';  // Concaténation
-```
-
-#### Integer (Entier)
-```php
-<?php
-$positif = 42;
-$negatif = -15;
-$hexadecimal = 0x1A;  // 26 en décimal
-```
-
-#### Float (Nombre décimal)
-```php
-<?php
-$pi = 3.14159;
-$scientifique = 1.5e3;  // 1500
-```
-
-#### Boolean (Booléen)
-```php
-<?php
-$vrai = true;
-$faux = false;
-```
-
-### Types Composés
-
-#### Array (Tableau)
-```php
-<?php
-// Tableau indexé
-$fruits = ["pomme", "banane", "orange"];
-
-// Tableau associatif
-$personne = [
-    "nom" => "Dupont",
-    "prenom" => "Jean",
-    "age" => 30
-];
-```
-
-#### NULL
-```php
-<?php
-$vide = null;
-```
-
-### Vérifier le type
-
-```php
-<?php
-$valeur = 42;
-
-var_dump($valeur);      // Affiche type et valeur détaillés
-echo gettype($valeur);  // Affiche "integer"
-
-// Tests de type
-is_string($valeur);     // false
-is_int($valeur);        // true
-is_float($valeur);      // false
-is_bool($valeur);       // false
-is_array($valeur);      // false
-is_null($valeur);       // false
-```
-
----
-
-## 4. Echo vs Print
-
-### Echo
-
-```php
-<?php
-echo "Hello World";
-echo "Une", " ", "phrase", " ", "complète";  // Accepte plusieurs arguments
-
-// Pas de valeur de retour
-$resultat = echo "test";  // ERREUR
-```
-
-**Caractéristiques :**
-- ✅ Plus rapide (légèrement)
-- ✅ Peut afficher plusieurs arguments
-- ❌ N'a pas de valeur de retour
-- ✅ Pas de parenthèses nécessaires
-
-### Print
-
-```php
-<?php
-print "Hello World";
-print("Hello avec parenthèses");  // Parenthèses optionnelles
-
-// Retourne toujours 1
-$resultat = print "test";  // $resultat = 1
-```
-
-**Caractéristiques :**
-- ❌ Légèrement plus lent
-- ❌ Un seul argument
-- ✅ Retourne toujours 1
-- ✅ Peut être utilisé dans des expressions
-
-### Comparaison
-
-```php
-<?php
-// Echo - Usage courant
-echo "Nom : ", $nom, " Age : ", $age;
-
-// Print - Usage dans expression
-$variable = print "test";  // Possible mais rare
-
-// Les deux fonctionnent de la même façon pour l'affichage simple
+// ❌ MAUVAIS : Commentaire inutile
+// Affiche bonjour
 echo "Bonjour";
-print "Bonjour";
+?>
 ```
-
-### Recommandation
-💡 **Utilisez `echo`** dans la plupart des cas pour de meilleures performances.
 
 ---
 
-## 5. Exercices Guidés
-
-### Exercice 1 : Variables et Types
-**Objectif** : Créer et manipuler différentes variables
+### 🔹 Instructions et blocs de code
 
 ```php
 <?php
-// TODO : Créez les variables suivantes
-// 1. $prenom avec votre prénom
-// 2. $nom avec votre nom
-// 3. $age avec votre âge
-// 4. $taille avec votre taille en mètres (ex: 1.75)
-// 5. $estEtudiant avec true ou false
+// Une instruction simple
+echo "Bonjour";
 
-// Exemple de solution :
+// Plusieurs instructions
+echo "Ligne 1";
+echo "Ligne 2";
+echo "Ligne 3";
+
+// Instructions sur plusieurs lignes (possible mais pas recommandé)
+echo "Ce texte est
+     sur plusieurs
+     lignes";
+?>
+```
+
+---
+
+### 🔹 Affichage avec HTML
+
+PHP génère du HTML, vous pouvez donc mélanger les deux :
+
+```php
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Syntaxe PHP</title>
+</head>
+<body>
+    <h1>Mon site dynamique</h1>
+    
+    <?php
+    echo "<p>Ce paragraphe est généré par PHP</p>";
+    echo "<p>Voici un autre paragraphe</p>";
+    ?>
+    
+    <p>Ce paragraphe est du HTML pur</p>
+</body>
+</html>
+```
+
+---
+
+## 📦 3. Variables en PHP
+
+### 🔹 Qu'est-ce qu'une variable ?
+
+Une **variable** est un conteneur qui stocke une valeur. Imaginez une boîte avec une étiquette.
+
+```
+┌─────────────────┐
+│  Étiquette: $nom│
+│                 │
+│  Contenu: "Ali" │
+└─────────────────┘
+```
+
+---
+
+### 🔹 Déclaration et affectation
+
+En PHP, les variables commencent toujours par le symbole **`$`**
+
+```php
+<?php
+
+// Déclaration et affectation
+$nom = "Hermès";
+$age = 25;
+$ville = "Kinshasa";
+
+// Afficher une variable
+echo $nom;      // Affiche : Hermès
+echo $age;      // Affiche : 25
+echo $ville;    // Affiche : Kinshasa
+
+?>
+```
+
+**Syntaxe :**
+```php
+$nomDeVariable = valeur;
+```
+
+---
+
+### 🔹 Règles de nommage des variables
+
+✅ **AUTORISÉ :**
+```php
+$nom
+$prenom
+$age
+$ville_naissance
+$villeNaissance    // CamelCase
+$nombre1
+$_variable         // Commence par underscore
+```
+
+❌ **INTERDIT :**
+```php
+$1nombre          // Ne peut pas commencer par un chiffre
+$mon-nom          // Pas de tiret
+$mon nom          // Pas d'espace
+$élève            // Éviter les accents
+```
+
+**Convention** : Utilisez des noms descriptifs !
+```php
+// ✅ BON
+$prixProduit = 100;
+$nomUtilisateur = "Jean";
+
+// ❌ MAUVAIS
+$p = 100;
+$x = "Jean";
+```
+
+---
+
+### 🔹 Variables et chaînes de caractères
+
+```php
+<?php
+
+$prenom = "Hermès";
+$nom = "Oliho";
+
+// Concaténation avec le point (.)
+echo "Bonjour " . $prenom . " " . $nom;
+// Affiche : Bonjour Hermès Oliho
+
+// Interpolation dans les guillemets doubles
+echo "Bonjour $prenom $nom";
+// Affiche : Bonjour Hermès Oliho
+
+// Avec guillemets simples (pas d'interpolation)
+echo 'Bonjour $prenom $nom';
+// Affiche : Bonjour $prenom $nom (texte littéral)
+
+?>
+```
+
+**Différence importante :**
+- **Guillemets doubles `" "`** : Les variables sont interprétées
+- **Guillemets simples `' '`** : Les variables ne sont PAS interprétées
+
+---
+
+### 🔹 Modification de variables
+
+```php
+<?php
+
+$compteur = 0;
+echo $compteur;  // Affiche : 0
+
+$compteur = 5;
+echo $compteur;  // Affiche : 5
+
+$compteur = 10;
+echo $compteur;  // Affiche : 10
+
+// Une variable peut changer de valeur à tout moment
+
+?>
+```
+
+---
+
+### 🔹 Variables et calculs
+
+```php
+<?php
+
+$a = 10;
+$b = 5;
+
+$somme = $a + $b;
+echo "Somme : $somme";  // Affiche : Somme : 15
+
+$difference = $a - $b;
+echo "Différence : $difference";  // Affiche : Différence : 5
+
+$produit = $a * $b;
+echo "Produit : $produit";  // Affiche : Produit : 50
+
+$quotient = $a / $b;
+echo "Quotient : $quotient";  // Affiche : Quotient : 2
+
+?>
+```
+
+---
+
+### 🔹 Opérateurs d'affectation combinés
+
+```php
+<?php
+
+$nombre = 10;
+
+$nombre = $nombre + 5;  // $nombre vaut maintenant 15
+
+// Équivalent plus court :
+$nombre += 5;   // Ajoute 5 à $nombre
+$nombre -= 3;   // Soustrait 3 de $nombre
+$nombre *= 2;   // Multiplie $nombre par 2
+$nombre /= 4;   // Divise $nombre par 4
+
+// Incrémentation et décrémentation
+$compteur = 0;
+$compteur++;    // Ajoute 1 : $compteur vaut 1
+$compteur++;    // Ajoute 1 : $compteur vaut 2
+$compteur--;    // Enlève 1 : $compteur vaut 1
+
+?>
+```
+
+---
+
+## 🎨 4. Types de données
+
+PHP est un langage à **typage dynamique** : vous n'avez pas besoin de déclarer le type d'une variable.
+
+### 🔹 Les principaux types
+
+#### 1️⃣ **String (Chaîne de caractères)**
+
+Texte entre guillemets.
+
+```php
+<?php
+
 $prenom = "Alice";
-$nom = "Martin";
-$age = 22;
-$taille = 1.68;
-$estEtudiant = true;
+$message = 'Bonjour tout le monde';
+$phrase = "Il a dit : \"Bonjour\""; // Échapper les guillemets
 
-// Affichage
-echo "Prénom : " . $prenom . "\n";
-echo "Nom : " . $nom . "\n";
-echo "Âge : " . $age . " ans\n";
-echo "Taille : " . $taille . " m\n";
-echo "Étudiant : " . ($estEtudiant ? "Oui" : "Non") . "\n";
+echo $prenom;   // Affiche : Alice
+
 ?>
 ```
 
-### Exercice 2 : Concaténation
-**Objectif** : Combiner des chaînes de caractères
+#### 2️⃣ **Integer (Entier)**
+
+Nombre sans décimales.
 
 ```php
 <?php
-$ville = "Paris";
-$pays = "France";
-$population = 2161000;
 
-// TODO : Créez une phrase complète avec ces variables
-// Format attendu : "Paris est une ville de France avec 2161000 habitants."
+$age = 25;
+$temperature = -10;
+$population = 1000000;
 
-// Solution :
-$phrase = $ville . " est une ville de " . $pays . " avec " . $population . " habitants.";
-echo $phrase;
+echo $age;  // Affiche : 25
 
-// Alternative avec interpolation
-$phrase2 = "$ville est une ville de $pays avec $population habitants.";
-echo $phrase2;
 ?>
 ```
 
-### Exercice 3 : Calculs avec Variables
-**Objectif** : Effectuer des opérations mathématiques
+#### 3️⃣ **Float / Double (Nombre décimal)**
+
+Nombre avec décimales.
 
 ```php
 <?php
-// TODO : Calculez les valeurs suivantes
+
+$prix = 19.99;
+$temperature = 36.6;
+$pi = 3.14159;
+
+echo $prix;  // Affiche : 19.99
+
+?>
+```
+
+#### 4️⃣ **Boolean (Booléen)**
+
+Vrai ou faux.
+
+```php
+<?php
+
+$estConnecte = true;
+$estMajeur = false;
+
+// Utilisé surtout dans les conditions (on verra jeudi)
+
+?>
+```
+
+#### 5️⃣ **NULL**
+
+Absence de valeur.
+
+```php
+<?php
+
+$variable = null;  // La variable existe mais n'a pas de valeur
+
+?>
+```
+
+---
+
+### 🔹 Vérifier le type d'une variable
+
+```php
+<?php
+
+$nom = "Alice";
+$age = 25;
+$prix = 19.99;
+$estActif = true;
+
+var_dump($nom);      // string(5) "Alice"
+var_dump($age);      // int(25)
+var_dump($prix);     // float(19.99)
+var_dump($estActif); // bool(true)
+
+?>
+```
+
+**`var_dump()`** est très utile pour déboguer (voir le contenu et le type d'une variable).
+
+---
+
+### 🔹 Conversion de types (casting)
+
+```php
+<?php
+
+$nombre = "123";  // C'est une chaîne de caractères
+$entier = (int)$nombre;  // Conversion en entier
+
+echo $nombre;   // Affiche : 123 (string)
+echo $entier;   // Affiche : 123 (int)
+
+// Autres conversions
+$texte = "19.99";
+$decimal = (float)$texte;   // Convertir en float
+
+$valeur = 10;
+$chaine = (string)$valeur;  // Convertir en string
+
+?>
+```
+
+---
+
+### 🔹 Opérations entre types différents
+
+PHP convertit automatiquement les types si nécessaire :
+
+```php
+<?php
+
+$a = "10";     // String
+$b = 5;        // Integer
+
+$resultat = $a + $b;  // PHP convertit "10" en 10
+echo $resultat;       // Affiche : 15
+
+// Attention aux pièges !
+$x = "10 pommes";
+$y = 5;
+$z = $x + $y;  // PHP prend le 10 et ignore "pommes"
+echo $z;       // Affiche : 15
+
+?>
+```
+
+---
+
+## 🖨️ 5. echo vs print
+
+Les deux servent à afficher du contenu, mais il y a quelques différences.
+
+### 🔹 echo
+
+```php
+<?php
+
+// Affichage simple
+echo "Bonjour";
+
+// Plusieurs arguments (plus rapide)
+echo "Bonjour", " ", "tout", " ", "le monde";
+
+// Avec des variables
+$nom = "Alice";
+echo "Bonjour $nom";
+
+// Afficher du HTML
+echo "<h1>Titre</h1>";
+echo "<p>Paragraphe</p>";
+
+?>
+```
+
+### 🔹 print
+
+```php
+<?php
+
+// Affichage simple
+print "Bonjour";
+
+// Avec des variables
+$nom = "Alice";
+print "Bonjour $nom";
+
+// print retourne toujours 1
+$resultat = print "Bonjour";  // $resultat vaut 1
+
+?>
+```
+
+---
+
+### 🔹 Différences principales
+
+| Caractéristique | echo | print |
+|----------------|------|-------|
+| Vitesse | Plus rapide | Légèrement plus lent |
+| Arguments multiples | ✅ Oui | ❌ Non |
+| Retourne une valeur | ❌ Non | ✅ Oui (toujours 1) |
+| Utilisation courante | ✅ Très fréquent | Moins fréquent |
+
+**Recommandation** : Utilisez `echo` dans 99% des cas.
+
+---
+
+### 🔹 Sauts de ligne et mise en forme
+
+```php
+<?php
+
+// En HTML, les sauts de ligne PHP n'apparaissent pas
+echo "Ligne 1";
+echo "Ligne 2";  // S'affiche collé à Ligne 1
+
+// Il faut utiliser <br> pour un saut de ligne HTML
+echo "Ligne 1<br>";
+echo "Ligne 2<br>";
+
+// Ou des balises de paragraphe
+echo "<p>Paragraphe 1</p>";
+echo "<p>Paragraphe 2</p>";
+
+?>
+```
+
+**Dans le code source (pas visible par l'utilisateur) :**
+```php
+<?php
+echo "Ligne 1\n";  // \n = saut de ligne dans le code source
+echo "Ligne 2\n";
+?>
+```
+
+---
+
+## 💪 6. Exercices guidés
+
+### 📝 Exercice 1 : Variables de présentation
+
+**Objectif** : Créer une page de présentation personnelle.
+
+**Consigne** : Créez un fichier `presentation.php` avec :
+- Une variable `$prenom`
+- Une variable `$nom`
+- Une variable `$age`
+- Une variable `$ville`
+- Affichez : "Je m'appelle [prénom] [nom], j'ai [age] ans et j'habite à [ville]."
+
+**Solution :**
+```php
+<?php
+$prenom = "Hermès";
+$nom = "Oliho";
+$age = 25;
+$ville = "Kinshasa";
+
+echo "Je m'appelle $prenom $nom, j'ai $age ans et j'habite à $ville.";
+?>
+```
+
+---
+
+### 📝 Exercice 2 : Calculs simples
+
+**Objectif** : Créer une calculatrice basique.
+
+**Consigne** : Créez un fichier `calculatrice.php` qui :
+- Définit deux variables `$nombre1` et `$nombre2`
+- Affiche leur somme, différence, produit et quotient
+
+**Solution :**
+```php
+<?php
+$nombre1 = 20;
+$nombre2 = 4;
+
+echo "Nombre 1 : $nombre1<br>";
+echo "Nombre 2 : $nombre2<br><br>";
+
+echo "Addition : " . ($nombre1 + $nombre2) . "<br>";
+echo "Soustraction : " . ($nombre1 - $nombre2) . "<br>";
+echo "Multiplication : " . ($nombre1 * $nombre2) . "<br>";
+echo "Division : " . ($nombre1 / $nombre2) . "<br>";
+?>
+```
+
+---
+
+### 📝 Exercice 3 : Prix TTC
+
+**Objectif** : Calculer un prix TTC à partir d'un prix HT.
+
+**Consigne** : 
+- Prix HT : 100 €
+- TVA : 20%
+- Calculer et afficher le prix TTC
+
+**Solution :**
+```php
+<?php
 $prixHT = 100;
-$tauxTVA = 0.20;  // 20%
+$tauxTVA = 0.20;  // 20% = 0.20
 
-// 1. Calculez le montant de la TVA
 $montantTVA = $prixHT * $tauxTVA;
-
-// 2. Calculez le prix TTC
 $prixTTC = $prixHT + $montantTVA;
 
-// 3. Affichez les résultats
-echo "Prix HT : " . $prixHT . " €\n";
-echo "TVA (20%) : " . $montantTVA . " €\n";
-echo "Prix TTC : " . $prixTTC . " €\n";
-?>
-```
-
-### Exercice 4 : Vérification de Types
-**Objectif** : Tester et afficher les types de variables
-
-```php
-<?php
-$valeur1 = "123";
-$valeur2 = 123;
-$valeur3 = 123.45;
-$valeur4 = true;
-$valeur5 = null;
-
-// TODO : Utilisez var_dump() pour afficher le type et la valeur de chaque variable
-echo "=== Analyse des types ===\n\n";
-
-echo "Valeur 1 :\n";
-var_dump($valeur1);
-
-echo "\nValeur 2 :\n";
-var_dump($valeur2);
-
-echo "\nValeur 3 :\n";
-var_dump($valeur3);
-
-echo "\nValeur 4 :\n";
-var_dump($valeur4);
-
-echo "\nValeur 5 :\n";
-var_dump($valeur5);
-?>
-```
-
-### Exercice 5 : Tableaux Simple
-**Objectif** : Créer et manipuler un tableau
-
-```php
-<?php
-// TODO : Créez un tableau avec vos 3 films préférés
-$films = ["Inception", "Matrix", "Interstellar"];
-
-// Affichage
-echo "Mes films préférés :\n";
-echo "1. " . $films[0] . "\n";
-echo "2. " . $films[1] . "\n";
-echo "3. " . $films[2] . "\n";
-
-// Bonus : Ajoutez un film
-$films[] = "The Prestige";
-echo "4. " . $films[3] . "\n";
-?>
-```
-
-### Exercice 6 : Tableau Associatif
-**Objectif** : Créer un profil utilisateur
-
-```php
-<?php
-// TODO : Créez un tableau associatif représentant un utilisateur
-$utilisateur = [
-    "nom" => "Dupont",
-    "prenom" => "Sophie",
-    "email" => "sophie.dupont@example.com",
-    "age" => 28,
-    "ville" => "Lyon"
-];
-
-// Affichage formaté
-echo "=== Profil Utilisateur ===\n\n";
-echo "Nom complet : " . $utilisateur["prenom"] . " " . $utilisateur["nom"] . "\n";
-echo "Email : " . $utilisateur["email"] . "\n";
-echo "Âge : " . $utilisateur["age"] . " ans\n";
-echo "Ville : " . $utilisateur["ville"] . "\n";
-?>
-```
-
-### Exercice 7 : Echo vs Print
-**Objectif** : Comparer les deux méthodes d'affichage
-
-```php
-<?php
-$message1 = "Première ligne";
-$message2 = "Deuxième ligne";
-
-// Avec echo
-echo "=== Utilisation d'echo ===\n";
-echo $message1, " | ", $message2, "\n";
-
-// Avec print
-echo "\n=== Utilisation de print ===\n";
-print $message1 . " | " . $message2 . "\n";
-
-// Print dans une expression
-$resultat = print "\nPrint retourne : ";
-echo $resultat . "\n";  // Affiche 1
+echo "Prix HT : $prixHT €<br>";
+echo "TVA (20%) : $montantTVA €<br>";
+echo "Prix TTC : $prixTTC €<br>";
 ?>
 ```
 
 ---
 
-## 📝 Mini-Projet : Carte de Visite
+### 📝 Exercice 4 : Âge dans 10 ans
 
-Créez un script PHP qui affiche votre carte de visite virtuelle en utilisant tout ce que vous avez appris :
+**Objectif** : Calculer votre âge dans 10 ans.
 
+**Consigne** : Créez une variable `$ageActuel` et calculez votre âge dans 10 ans.
+
+**Solution :**
 ```php
 <?php
-// Informations personnelles
-$nom = "MARTIN";
+$ageActuel = 25;
+$ageDans10Ans = $ageActuel + 10;
+
+echo "Aujourd'hui, j'ai $ageActuel ans.<br>";
+echo "Dans 10 ans, j'aurai $ageDans10Ans ans.";
+?>
+```
+
+---
+
+### 📝 Exercice 5 : Conversion de température
+
+**Objectif** : Convertir des degrés Celsius en Fahrenheit.
+
+**Formule** : °F = (°C × 9/5) + 32
+
+**Consigne** : 
+- Température en Celsius : 25°C
+- Afficher la température en Fahrenheit
+
+**Solution :**
+```php
+<?php
+$celsius = 25;
+$fahrenheit = ($celsius * 9/5) + 32;
+
+echo "$celsius°C = $fahrenheit°F";
+?>
+```
+
+---
+
+### 📝 Exercice 6 : Page HTML dynamique
+
+**Objectif** : Créer une page HTML complète avec des variables PHP.
+
+**Consigne** : Créez un fichier `profil.php` qui affiche un profil utilisateur avec :
+- Photo (URL)
+- Nom complet
+- Âge
+- Bio
+
+**Solution :**
+```php
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Profil utilisateur</title>
+    <style>
+        .profil {
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+        }
+        .profil img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <?php
+    $photo = "https://via.placeholder.com/100";
+    $nom = "Hermès Oliho";
+    $age = 25;
+    $bio = "Développeur web passionné par PHP et Laravel.";
+    ?>
+    
+    <div class="profil">
+        <img src="<?php echo $photo; ?>" alt="Photo de profil">
+        <h2><?php echo $nom; ?></h2>
+        <p><strong>Âge :</strong> <?php echo $age; ?> ans</p>
+        <p><strong>Bio :</strong> <?php echo $bio; ?></p>
+    </div>
+</body>
+</html>
+```
+
+---
+
+### 📝 Exercice 7 : Débogage
+
+**Objectif** : Trouver et corriger les erreurs.
+
+**Code avec erreurs :**
+```php
+<?php
+$nom = "Alice"
+$age = 25;
+echo "Bonjour $Nom, vous avez age ans.";
+?>
+```
+
+**Erreurs :**
+1. Ligne 2 : Manque le point-virgule
+2. Ligne 4 : `$Nom` devrait être `$nom` (sensible à la casse)
+3. Ligne 4 : Manque `$` devant `age`
+
+**Code corrigé :**
+```php
+<?php
+$nom = "Alice";
+$age = 25;
+echo "Bonjour $nom, vous avez $age ans.";
+?>
+```
+
+---
+
+## 🎯 7. Synthèse de la séance
+
+### Ce que vous avez appris aujourd'hui
+
+✅ Syntaxe PHP (commentaires, instructions)  
+✅ Déclaration et utilisation de variables  
+✅ Règles de nommage  
+✅ Types de données (string, int, float, boolean, null)  
+✅ Différence entre `echo` et `print`  
+✅ Concaténation et interpolation de chaînes  
+✅ Opérations mathématiques avec des variables  
+
+---
+
+### Points clés à retenir
+
+1. **Les variables commencent toujours par `$`**
+2. **PHP est sensible à la casse pour les variables**
+3. **Guillemets doubles `" "` : interprètent les variables**
+4. **Guillemets simples `' '` : texte littéral**
+5. **`var_dump()` est votre ami pour déboguer**
+6. **Utilisez `echo` dans la plupart des cas**
+7. **Nommez vos variables de manière descriptive**
+
+---
+
+## 📚 Devoirs pour Jeudi
+
+### Exercice 1 : Carte de visite
+
+Créez un fichier `carte_visite.php` qui affiche une carte de visite avec :
+- Votre nom
+- Votre fonction (ex: Développeur web)
+- Votre email
+- Votre téléphone
+- Stylisez avec du CSS
+
+### Exercice 2 : Calcul de TVA avancé
+
+Créez un fichier `tva_multiple.php` qui :
+- Calcule le prix TTC de 3 produits différents
+- Chaque produit a un prix HT différent
+- Affiche un tableau HTML avec : Produit, Prix HT, TVA, Prix TTC
+
+### Exercice 3 : Expérimentation
+
+Testez ces différences :
+```php
+<?php
+$nom = "Alice";
+
+// Testez chacune de ces lignes et observez le résultat
+echo "Bonjour $nom";
+echo 'Bonjour $nom';
+echo "Bonjour " . $nom;
+echo 'Bonjour ' . $nom;
+?>
+```
+
+### Exercice 4 : Mini-projet : Simulateur de salaire
+
+Créez un fichier `salaire.php` qui :
+- Définit un salaire brut mensuel
+- Calcule les cotisations sociales (23% du brut)
+- Calcule le salaire net
+- Calcule le salaire annuel (net × 12)
+- Affiche tous ces résultats de manière claire
+
+**Exemple attendu :**
+```
+Salaire brut mensuel : 3000 €
+Cotisations sociales (23%) : 690 €
+Salaire net mensuel : 2310 €
+Salaire net annuel : 27720 €
+```
+
+---
+
+## 🔗 Ressources complémentaires
+
+### Documentation
+- 📖 Variables PHP : https://www.php.net/manual/fr/language.variables.php
+- 📖 Types de données : https://www.php.net/manual/fr/language.types.php
+- 📖 Opérateurs : https://www.php.net/manual/fr/language.operators.php
+
+### Outils utiles
+- 🛠️ PHP Sandbox (tester du code en ligne) : https://sandbox.onlinephpfunctions.com/
+- 🛠️ W3Schools PHP : https://www.w3schools.com/php/
+
+---
+
+## ❓ Questions fréquentes
+
+**Q : Faut-il toujours mettre `$` devant une variable ?**  
+R : Oui, toujours ! Sans `$`, PHP pense que c'est une constante ou un mot-clé.
+
+**Q : Peut-on utiliser des accents dans les noms de variables ?**  
+R : Techniquement oui, mais c'est fortement déconseillé. Utilisez uniquement a-z, A-Z, 0-9, et _.
+
+**Q : Quelle est la différence entre `=` et `==` ?**  
+R : `=` affecte une valeur, `==` compare deux valeurs (on verra ça jeudi avec les conditions).
+
+**Q : Comment afficher le symbole `$` dans echo ?**  
+R : Utilisez `echo "\$";` ou `echo '$';`
+
+**Q : Peut-on changer le type d'une variable ?**  
+R : Oui ! PHP permet de réaffecter n'importe quel type à une variable.
+
+```php
+$variable = "texte";  // string
+$variable = 123;      // int maintenant
+$variable = true;     // boolean maintenant
+```
+
+---
+
+## 🎓 Mini-quiz de fin de séance
+
+**Question 1** : Quelle est la sortie de ce code ?
+```php
+<?php
+$a = "5";
+$b = 5;
+echo $a + $b;
+?>
+```
+<details>
+<summary>Voir la réponse</summary>
+Réponse : 10 (PHP convertit "5" en 5)
+</details>
+
+**Question 2** : Trouvez l'erreur :
+```php
+<?php
 $prenom = "Alice";
-$profession = "Développeuse Web";
-$email = "alice.martin@example.com";
-$telephone = "+33 6 12 34 56 78";
-$ville = "Paris";
-$competences = ["PHP", "JavaScript", "MySQL", "HTML/CSS"];
-$anneesExperience = 3;
-
-// Affichage de la carte de visite
-echo "╔════════════════════════════════════════╗\n";
-echo "║         CARTE DE VISITE                ║\n";
-echo "╠════════════════════════════════════════╣\n";
-echo "║                                        ║\n";
-echo "║  " . $prenom . " " . $nom . "\n";
-echo "║  " . $profession . "\n";
-echo "║                                        ║\n";
-echo "║  📧 " . $email . "\n";
-echo "║  📱 " . $telephone . "\n";
-echo "║  📍 " . $ville . "\n";
-echo "║                                        ║\n";
-echo "║  🛠️  Compétences :                     ║\n";
-foreach ($competences as $competence) {
-    echo "║     • " . $competence . "\n";
-}
-echo "║                                        ║\n";
-echo "║  💼 " . $anneesExperience . " ans d'expérience\n";
-echo "║                                        ║\n";
-echo "╚════════════════════════════════════════╝\n";
+echo "Bonjour Prenom";
 ?>
 ```
+<details>
+<summary>Voir la réponse</summary>
+Réponse : Il manque $ devant Prenom → echo "Bonjour $prenom";
+</details>
+
+**Question 3** : Quelle est la différence entre ces deux lignes ?
+```php
+echo "Bonjour $nom";
+echo 'Bonjour $nom';
+```
+<details>
+<summary>Voir la réponse</summary>
+Réponse : La première interprète $nom, la seconde affiche littéralement "$nom"
+</details>
 
 ---
 
-## 🎯 Points Clés à Retenir
+**Excellent travail ! Vous maîtrisez maintenant les bases de PHP ! 🎉**
 
-1. **Syntaxe** : `<?php` pour commencer, `;` pour terminer les instructions
-2. **Variables** : Toujours préfixées par `$`, sensibles à la casse
-3. **Types** : String, Integer, Float, Boolean, Array, NULL
-4. **Echo** : Plus rapide, plusieurs arguments, pas de retour
-5. **Print** : Un argument, retourne 1
-6. **Concaténation** : Utilisez `.` pour joindre des chaînes
-7. **Interpolation** : Variables dans des guillemets doubles
-
----
-
-## 📚 Ressources Supplémentaires
-
-- [Documentation PHP Officielle](https://www.php.net/manual/fr/)
-- [PHP: The Right Way](https://phptherightway.com/)
-- [W3Schools PHP Tutorial](https://www.w3schools.com/php/)
-
----
-
-## ✅ Checklist de Progression
-
-- [ ] J'ai compris la syntaxe de base de PHP
-- [ ] Je sais créer et utiliser des variables
-- [ ] Je connais les différents types de données
-- [ ] Je peux expliquer la différence entre echo et print
-- [ ] J'ai complété tous les exercices guidés
-- [ ] J'ai créé mon mini-projet de carte de visite
-
----
-
-**Prochaine étape** : Semaine 01 - Jeudi - Opérateurs et Structures de Contrôle
-
-*Créé le 2026-01-11*
+Rendez-vous jeudi pour découvrir la logique de programmation avec les conditions et les opérateurs!
