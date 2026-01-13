@@ -23,9 +23,11 @@
 ## 📅 Planning des séances
 
 ### 📘 [Lundi - Introduction au PHP](lundi-introduction-php.md)
+
 **Durée** : 3 heures
 
 #### Contenu
+
 - 🌐 Présentation du bootcamp et objectifs
 - 🔄 Web statique vs Web dynamique
 - 🐘 Rôle de PHP dans le développement web
@@ -34,12 +36,14 @@
 - 📝 Intégration HTML et PHP
 
 #### Compétences acquises
+
 - Installation d'un serveur local
 - Création de fichiers PHP
 - Utilisation de `echo` pour afficher du contenu
 - Compréhension du cycle requête/réponse
 
 #### Concepts clés
+
 ```php
 <?php
 echo "Bonjour tout le monde !";
@@ -49,9 +53,11 @@ echo "Bonjour tout le monde !";
 ---
 
 ### 📗 [Mercredi - Bases de PHP](mercredi-bases-php.md)
+
 **Durée** : 3 heures
 
 #### Contenu
+
 - ✍️ Syntaxe PHP (balises, commentaires, instructions)
 - 📦 Variables (déclaration, affectation, nommage)
 - 🎨 Types de données (string, int, float, boolean, null)
@@ -60,6 +66,7 @@ echo "Bonjour tout le monde !";
 - ⚙️ Opérateurs d'affectation combinés
 
 #### Compétences acquises
+
 - Déclarer et manipuler des variables
 - Comprendre les types de données
 - Convertir des types (casting)
@@ -67,6 +74,7 @@ echo "Bonjour tout le monde !";
 - Effectuer des calculs mathématiques
 
 #### Concepts clés
+
 ```php
 <?php
 // Variables
@@ -87,9 +95,11 @@ $compteur++;
 ---
 
 ### 📙 [Jeudi - Logique de base](jeudi-logique-base.md)
+
 **Durée** : 3 heures
 
 #### Contenu
+
 - ⚙️ Opérateurs arithmétiques (+, -, *, /, %, **)
 - 🔍 Opérateurs de comparaison (==, ===, !=, !==, <, >, <=, >=)
 - 🧠 Opérateurs logiques (&&, ||, !)
@@ -99,6 +109,7 @@ $compteur++;
 - 📊 Conditions multiples et imbriquées
 
 #### Compétences acquises
+
 - Comparer des valeurs
 - Prendre des décisions dans le code
 - Utiliser la logique booléenne
@@ -106,6 +117,7 @@ $compteur++;
 - Choisir entre if et switch
 
 #### Concepts clés
+
 ```php
 <?php
 // Conditions
@@ -137,6 +149,7 @@ $statut = ($age >= 18) ? "Majeur" : "Mineur";
 ## 📊 Récapitulatif des concepts
 
 ### Syntaxe de base
+
 ```php
 <?php
 // Commentaire sur une ligne
@@ -151,23 +164,26 @@ echo "Affichage";  // Instruction terminée par ;
 ```
 
 ### Variables et types
-| Type | Exemple | Utilisation |
-|------|---------|-------------|
-| String | `$nom = "Alice";` | Texte |
-| Integer | `$age = 25;` | Nombre entier |
-| Float | `$prix = 19.99;` | Nombre décimal |
-| Boolean | `$actif = true;` | Vrai/Faux |
-| NULL | `$valeur = null;` | Absence de valeur |
+
+| Type    | Exemple           | Utilisation       |
+| ------- | ----------------- | ----------------- |
+| String  | `$nom = "Alice";` | Texte             |
+| Integer | `$age = 25;`      | Nombre entier     |
+| Float   | `$prix = 19.99;`  | Nombre décimal    |
+| Boolean | `$actif = true;`  | Vrai/Faux         |
+| NULL    | `$valeur = null;` | Absence de valeur |
 
 ### Opérateurs principaux
-| Catégorie | Opérateurs | Exemple |
-|-----------|-----------|---------|
-| Arithmétiques | `+ - * / % **` | `$a + $b` |
-| Comparaison | `== === != !== < > <= >=` | `$a === $b` |
-| Logiques | `&& || !` | `$a && $b` |
-| Affectation | `= += -= *= /= ++ --` | `$a += 5` |
+
+| Catégorie     | Opérateurs                | Exemple     |
+| ------------- | ------------------------- | ----------- |
+| Arithmétiques | `+ - * / % **`            | `$a + $b`   |
+| Comparaison   | `== === != !== < > <= >=` | `$a === $b` |
+| Logiques      | `&&                       |             |
+| Affectation   | `= += -= *= /= ++ --`     | `$a += 5`   |
 
 ### Structures de contrôle
+
 ```php
 // if/else
 if (condition) {
@@ -196,6 +212,7 @@ switch ($variable) {
 Après cette semaine, vous savez :
 
 ### Environnement de développement
+
 - ✅ Installer XAMPP/WAMP/LAMP
 - ✅ Démarrer Apache et MySQL
 - ✅ Créer des fichiers dans `htdocs`
@@ -203,12 +220,14 @@ Après cette semaine, vous savez :
 - ✅ Utiliser VS Code avec les extensions PHP
 
 ### Syntaxe PHP
+
 - ✅ Ouvrir et fermer des balises PHP
 - ✅ Écrire des commentaires
 - ✅ Terminer les instructions avec `;`
 - ✅ Respecter la sensibilité à la casse
 
 ### Manipulation de données
+
 - ✅ Déclarer des variables
 - ✅ Assigner des valeurs
 - ✅ Changer le type d'une variable
@@ -216,6 +235,7 @@ Après cette semaine, vous savez :
 - ✅ Concaténer des chaînes
 
 ### Logique de programmation
+
 - ✅ Comparer des valeurs
 - ✅ Utiliser des conditions
 - ✅ Combiner plusieurs conditions
@@ -227,6 +247,7 @@ Après cette semaine, vous savez :
 ## 🔑 Points clés à retenir
 
 ### Les essentiels
+
 1. **Toutes les variables commencent par `$`**
 2. **Utilisez `===` au lieu de `==`** (comparaison stricte)
 3. **Chaque instruction se termine par `;`**
@@ -235,6 +256,7 @@ Après cette semaine, vous savez :
 6. **`var_dump()` est votre meilleur ami pour déboguer**
 
 ### Erreurs courantes à éviter
+
 ❌ Oublier le `$` devant une variable  
 ❌ Oublier le `;` en fin d'instruction  
 ❌ Confondre `=` (affectation) et `==` (comparaison)  
@@ -247,18 +269,21 @@ Après cette semaine, vous savez :
 ## 💡 Conseils pour progresser
 
 ### Pratique quotidienne
+
 - 📝 Codez tous les jours, même 30 minutes
 - 🔄 Refaites les exercices sans regarder les solutions
 - 🎯 Créez vos propres petits projets
 - 🤔 Essayez de résoudre des problèmes différemment
 
 ### Ressources utiles
+
 - 📖 Documentation officielle PHP : https://www.php.net/manual/fr/
 - 🛠️ PHP Sandbox : https://sandbox.onlinephpfunctions.com/
 - 💬 Stack Overflow : https://stackoverflow.com/questions/tagged/php
 - 🎥 Tutoriels YouTube en français
 
 ### Débogage
+
 - Utilisez `var_dump()` pour voir le contenu des variables
 - Utilisez `echo` pour tracer le flux d'exécution
 - Lisez attentivement les messages d'erreur
@@ -277,20 +302,24 @@ Après cette semaine, vous savez :
 Créez un fichier `evaluation_eleve.php` qui :
 
 1. **Définit les informations de l'élève**
+   
    - Nom et prénom
    - Classe
    - 5 notes de matières différentes (Maths, Français, Histoire, Anglais, Sciences)
 
 2. **Calcule automatiquement**
+   
    - La moyenne générale
    - La note la plus haute
    - La note la plus basse
 
 3. **Détermine**
+   
    - La mention (selon le barème ci-dessous)
    - Si l'élève est admis (moyenne >= 10) ou recalé
 
 4. **Affiche un bulletin scolaire complet** avec :
+   
    - Informations de l'élève
    - Toutes les notes
    - Les statistiques (moyenne, max, min)
@@ -298,6 +327,7 @@ Créez un fichier `evaluation_eleve.php` qui :
    - Un message personnalisé selon la mention
 
 #### Barème des mentions
+
 - **Très bien** : moyenne >= 16
 - **Bien** : moyenne >= 14
 - **Assez bien** : moyenne >= 12
@@ -305,6 +335,7 @@ Créez un fichier `evaluation_eleve.php` qui :
 - **Insuffisant** : moyenne < 10
 
 #### Messages personnalisés
+
 - Très bien : "Félicitations ! Excellent travail !"
 - Bien : "Très bon travail, continuez ainsi !"
 - Assez bien : "Bon travail, vous pouvez faire encore mieux !"

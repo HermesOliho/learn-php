@@ -79,12 +79,14 @@ echo "Bonjour"; // Commentaire en fin de ligne
 ```
 
 **Pourquoi commenter ?**
+
 - ✅ Expliquer votre logique
 - ✅ Aider les autres développeurs (ou vous-même plus tard)
 - ✅ Désactiver temporairement du code
 - ✅ Documenter les fonctions complexes
 
 **Bonnes pratiques :**
+
 ```php
 <?php
 // ✅ BON : Commentaire clair et utile
@@ -133,12 +135,12 @@ PHP génère du HTML, vous pouvez donc mélanger les deux :
 </head>
 <body>
     <h1>Mon site dynamique</h1>
-    
+
     <?php
     echo "<p>Ce paragraphe est généré par PHP</p>";
     echo "<p>Voici un autre paragraphe</p>";
     ?>
-    
+
     <p>Ce paragraphe est du HTML pur</p>
 </body>
 </html>
@@ -183,6 +185,7 @@ echo $ville;    // Affiche : Kinshasa
 ```
 
 **Syntaxe :**
+
 ```php
 $nomDeVariable = valeur;
 ```
@@ -192,6 +195,7 @@ $nomDeVariable = valeur;
 ### 🔹 Règles de nommage des variables
 
 ✅ **AUTORISÉ :**
+
 ```php
 $nom
 $prenom
@@ -203,6 +207,7 @@ $_variable         // Commence par underscore
 ```
 
 ❌ **INTERDIT :**
+
 ```php
 $1nombre          // Ne peut pas commencer par un chiffre
 $mon-nom          // Pas de tiret
@@ -211,6 +216,7 @@ $élève            // Éviter les accents
 ```
 
 **Convention** : Utilisez des noms descriptifs !
+
 ```php
 // ✅ BON
 $prixProduit = 100;
@@ -247,6 +253,7 @@ echo 'Bonjour $prenom $nom';
 ```
 
 **Différence importante :**
+
 - **Guillemets doubles `" "`** : Les variables sont interprétées
 - **Guillemets simples `' '`** : Les variables ne sont PAS interprétées
 
@@ -524,12 +531,12 @@ $resultat = print "Bonjour";  // $resultat vaut 1
 
 ### 🔹 Différences principales
 
-| Caractéristique | echo | print |
-|----------------|------|-------|
-| Vitesse | Plus rapide | Légèrement plus lent |
-| Arguments multiples | ✅ Oui | ❌ Non |
-| Retourne une valeur | ❌ Non | ✅ Oui (toujours 1) |
-| Utilisation courante | ✅ Très fréquent | Moins fréquent |
+| Caractéristique      | echo            | print                |
+| -------------------- | --------------- | -------------------- |
+| Vitesse              | Plus rapide     | Légèrement plus lent |
+| Arguments multiples  | ✅ Oui           | ❌ Non                |
+| Retourne une valeur  | ❌ Non           | ✅ Oui (toujours 1)   |
+| Utilisation courante | ✅ Très fréquent | Moins fréquent       |
 
 **Recommandation** : Utilisez `echo` dans 99% des cas.
 
@@ -556,6 +563,7 @@ echo "<p>Paragraphe 2</p>";
 ```
 
 **Dans le code source (pas visible par l'utilisateur) :**
+
 ```php
 <?php
 echo "Ligne 1\n";  // \n = saut de ligne dans le code source
@@ -572,6 +580,7 @@ echo "Ligne 2\n";
 **Objectif** : Créer une page de présentation personnelle.
 
 **Consigne** : Créez un fichier `presentation.php` avec :
+
 - Une variable `$prenom`
 - Une variable `$nom`
 - Une variable `$age`
@@ -579,6 +588,7 @@ echo "Ligne 2\n";
 - Affichez : "Je m'appelle [prénom] [nom], j'ai [age] ans et j'habite à [ville]."
 
 **Solution :**
+
 ```php
 <?php
 $prenom = "Hermès";
@@ -597,10 +607,12 @@ echo "Je m'appelle $prenom $nom, j'ai $age ans et j'habite à $ville.";
 **Objectif** : Créer une calculatrice basique.
 
 **Consigne** : Créez un fichier `calculatrice.php` qui :
+
 - Définit deux variables `$nombre1` et `$nombre2`
 - Affiche leur somme, différence, produit et quotient
 
 **Solution :**
+
 ```php
 <?php
 $nombre1 = 20;
@@ -623,11 +635,13 @@ echo "Division : " . ($nombre1 / $nombre2) . "<br>";
 **Objectif** : Calculer un prix TTC à partir d'un prix HT.
 
 **Consigne** : 
+
 - Prix HT : 100 €
 - TVA : 20%
 - Calculer et afficher le prix TTC
 
 **Solution :**
+
 ```php
 <?php
 $prixHT = 100;
@@ -651,6 +665,7 @@ echo "Prix TTC : $prixTTC €<br>";
 **Consigne** : Créez une variable `$ageActuel` et calculez votre âge dans 10 ans.
 
 **Solution :**
+
 ```php
 <?php
 $ageActuel = 25;
@@ -670,10 +685,12 @@ echo "Dans 10 ans, j'aurai $ageDans10Ans ans.";
 **Formule** : °F = (°C × 9/5) + 32
 
 **Consigne** : 
+
 - Température en Celsius : 25°C
 - Afficher la température en Fahrenheit
 
 **Solution :**
+
 ```php
 <?php
 $celsius = 25;
@@ -690,12 +707,14 @@ echo "$celsius°C = $fahrenheit°F";
 **Objectif** : Créer une page HTML complète avec des variables PHP.
 
 **Consigne** : Créez un fichier `profil.php` qui affiche un profil utilisateur avec :
+
 - Photo (URL)
 - Nom complet
 - Âge
 - Bio
 
 **Solution :**
+
 ```php
 <!DOCTYPE html>
 <html lang="fr">
@@ -724,7 +743,7 @@ echo "$celsius°C = $fahrenheit°F";
     $age = 25;
     $bio = "Développeur web passionné par PHP et Laravel.";
     ?>
-    
+
     <div class="profil">
         <img src="<?php echo $photo; ?>" alt="Photo de profil">
         <h2><?php echo $nom; ?></h2>
@@ -742,6 +761,7 @@ echo "$celsius°C = $fahrenheit°F";
 **Objectif** : Trouver et corriger les erreurs.
 
 **Code avec erreurs :**
+
 ```php
 <?php
 $nom = "Alice"
@@ -751,11 +771,13 @@ echo "Bonjour $Nom, vous avez age ans.";
 ```
 
 **Erreurs :**
+
 1. Ligne 2 : Manque le point-virgule
 2. Ligne 4 : `$Nom` devrait être `$nom` (sensible à la casse)
 3. Ligne 4 : Manque `$` devant `age`
 
 **Code corrigé :**
+
 ```php
 <?php
 $nom = "Alice";
@@ -797,6 +819,7 @@ echo "Bonjour $nom, vous avez $age ans.";
 ### Exercice 1 : Carte de visite
 
 Créez un fichier `carte_visite.php` qui affiche une carte de visite avec :
+
 - Votre nom
 - Votre fonction (ex: Développeur web)
 - Votre email
@@ -806,6 +829,7 @@ Créez un fichier `carte_visite.php` qui affiche une carte de visite avec :
 ### Exercice 2 : Calcul de TVA avancé
 
 Créez un fichier `tva_multiple.php` qui :
+
 - Calcule le prix TTC de 3 produits différents
 - Chaque produit a un prix HT différent
 - Affiche un tableau HTML avec : Produit, Prix HT, TVA, Prix TTC
@@ -813,6 +837,7 @@ Créez un fichier `tva_multiple.php` qui :
 ### Exercice 3 : Expérimentation
 
 Testez ces différences :
+
 ```php
 <?php
 $nom = "Alice";
@@ -828,6 +853,7 @@ echo 'Bonjour ' . $nom;
 ### Exercice 4 : Mini-projet : Simulateur de salaire
 
 Créez un fichier `salaire.php` qui :
+
 - Définit un salaire brut mensuel
 - Calcule les cotisations sociales (23% du brut)
 - Calcule le salaire net
@@ -835,6 +861,7 @@ Créez un fichier `salaire.php` qui :
 - Affiche tous ces résultats de manière claire
 
 **Exemple attendu :**
+
 ```
 Salaire brut mensuel : 3000 €
 Cotisations sociales (23%) : 690 €
@@ -847,11 +874,13 @@ Salaire net annuel : 27720 €
 ## 🔗 Ressources complémentaires
 
 ### Documentation
+
 - 📖 Variables PHP : https://www.php.net/manual/fr/language.variables.php
 - 📖 Types de données : https://www.php.net/manual/fr/language.types.php
 - 📖 Opérateurs : https://www.php.net/manual/fr/language.operators.php
 
 ### Outils utiles
+
 - 🛠️ PHP Sandbox (tester du code en ligne) : https://sandbox.onlinephpfunctions.com/
 - 🛠️ W3Schools PHP : https://www.w3schools.com/php/
 
@@ -859,7 +888,7 @@ Salaire net annuel : 27720 €
 
 ## ❓ Questions fréquentes
 
-**Q : Faut-il toujours mettre `$` devant une variable ?**  
+**Q : Faut-il toujours mettre `$` devant une variable ?**
 R : Oui, toujours ! Sans `$`, PHP pense que c'est une constante ou un mot-clé.
 
 **Q : Peut-on utiliser des accents dans les noms de variables ?**  
@@ -885,6 +914,7 @@ $variable = true;     // boolean maintenant
 ## 🎓 Mini-quiz de fin de séance
 
 **Question 1** : Quelle est la sortie de ce code ?
+
 ```php
 <?php
 $a = "5";
@@ -892,28 +922,33 @@ $b = 5;
 echo $a + $b;
 ?>
 ```
+
 <details>
 <summary>Voir la réponse</summary>
 Réponse : 10 (PHP convertit "5" en 5)
 </details>
 
 **Question 2** : Trouvez l'erreur :
+
 ```php
 <?php
 $prenom = "Alice";
 echo "Bonjour Prenom";
 ?>
 ```
+
 <details>
 <summary>Voir la réponse</summary>
 Réponse : Il manque $ devant Prenom → echo "Bonjour $prenom";
 </details>
 
 **Question 3** : Quelle est la différence entre ces deux lignes ?
+
 ```php
 echo "Bonjour $nom";
 echo 'Bonjour $nom';
 ```
+
 <details>
 <summary>Voir la réponse</summary>
 Réponse : La première interprète $nom, la seconde affiche littéralement "$nom"

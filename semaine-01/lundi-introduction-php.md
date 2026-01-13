@@ -25,6 +25,7 @@ Ce bootcamp est conçu pour vous transformer en développeur web capable de cré
 ### Objectifs du bootcamp
 
 À la fin de ces 12 semaines, vous serez capable de :
+
 - Développer des sites web dynamiques
 - Créer des applications avec base de données
 - Utiliser le framework Laravel
@@ -64,6 +65,7 @@ Un site web statique affiche **toujours le même contenu** pour tous les visiteu
 ```
 
 **Caractéristiques du web statique :**
+
 - ✅ Rapide à charger
 - ✅ Simple à héberger
 - ❌ Pas d'interaction avec l'utilisateur
@@ -78,18 +80,21 @@ Un site web statique affiche **toujours le même contenu** pour tous les visiteu
 ### 🔹 Web dynamique
 
 Un site web dynamique peut **changer de contenu** selon :
+
 - L'utilisateur connecté
 - L'heure de la visite
 - Les données en base de données
 - Les interactions de l'utilisateur
 
 **Exemples de sites dynamiques :**
+
 - 📧 Gmail (affiche VOS emails)
 - 🛒 Amazon (affiche des produits personnalisés)
 - 📱 Facebook (votre fil d'actualité unique)
 - 📺 YouTube (recommandations personnalisées)
 
 **Caractéristiques du web dynamique :**
+
 - ✅ Contenu personnalisé
 - ✅ Interaction avec base de données
 - ✅ Authentification utilisateur
@@ -144,11 +149,13 @@ PHP est un **langage de programmation côté serveur** créé en 1995 par Rasmus
 ### Pourquoi PHP ?
 
 **Popularité**
+
 - 📊 Utilisé par **77% des sites web** (W3Techs)
 - 🌐 WordPress, Wikipedia, Facebook (début) utilisent PHP
 - 💼 Énormément d'offres d'emploi
 
 **Avantages**
+
 - ✅ Facile à apprendre pour les débutants
 - ✅ Gratuit et open source
 - ✅ Compatible avec tous les systèmes (Windows, Mac, Linux)
@@ -159,28 +166,34 @@ PHP est un **langage de programmation côté serveur** créé en 1995 par Rasmus
 ### Que peut-on faire avec PHP ?
 
 1. **Générer du contenu dynamique**
+   
    - Afficher la date et l'heure actuelles
    - Personnaliser l'affichage selon l'utilisateur
 
 2. **Traiter des formulaires**
+   
    - Inscription / Connexion
    - Formulaire de contact
    - Sondages
 
 3. **Interagir avec des bases de données**
+   
    - Créer, lire, modifier, supprimer des données (CRUD)
    - Sauvegarder les informations utilisateurs
 
 4. **Gérer les sessions et cookies**
+   
    - Garder l'utilisateur connecté
    - Panier d'achat en ligne
 
 5. **Manipuler des fichiers**
+   
    - Upload d'images
    - Génération de PDF
    - Lecture/écriture de fichiers
 
 6. **Envoyer des emails**
+   
    - Notifications
    - Newsletters
 
@@ -210,6 +223,7 @@ PHP est un **langage de programmation côté serveur** créé en 1995 par Rasmus
 ## 🛠️ 4. Installation de l'environnement de développement
 
 Pour développer en PHP, vous avez besoin de :
+
 1. **Un serveur web** (Apache)
 2. **PHP** (interpréteur)
 3. **MySQL** (base de données)
@@ -222,20 +236,24 @@ Au lieu d'installer chaque élément séparément, utilisez une solution tout-en
 #### 🪟 Pour Windows : **XAMPP**
 
 1. **Télécharger XAMPP**
+   
    - Aller sur : https://www.apachefriends.org
    - Télécharger la version pour Windows
 
 2. **Installation**
+   
    - Lancer l'installateur
    - Choisir le dossier d'installation (ex: `C:\xampp`)
    - Sélectionner : Apache, MySQL, PHP, phpMyAdmin
 
 3. **Démarrer les services**
+   
    - Ouvrir le **XAMPP Control Panel**
    - Cliquer sur "Start" pour **Apache** et **MySQL**
    - Les modules doivent être en vert
 
 4. **Tester l'installation**
+   
    - Ouvrir le navigateur
    - Aller sur : `http://localhost`
    - Vous devriez voir la page d'accueil XAMPP
@@ -276,15 +294,18 @@ C:\xampp\htdocs\     (Windows)
 **Recommandation** : **Visual Studio Code** (VS Code)
 
 1. **Télécharger VS Code**
+   
    - https://code.visualstudio.com
 
 2. **Extensions recommandées**
+   
    - **PHP Intelephense** : Autocomplétion PHP
    - **PHP Debug** : Debugger
    - **HTML CSS Support** : Support HTML/CSS
    - **Prettier** : Formatage de code
 
 3. **Installer une extension**
+   
    - Ouvrir VS Code
    - Cliquer sur l'icône Extensions (carré à gauche)
    - Rechercher "PHP Intelephense"
@@ -297,12 +318,15 @@ C:\xampp\htdocs\     (Windows)
 ### Créer votre premier fichier PHP
 
 1. **Ouvrir le dossier htdocs**
+   
    - Aller dans `C:\xampp\htdocs\`
 
 2. **Créer un nouveau dossier**
+   
    - Nommer le : `bootcamp-php`
 
 3. **Créer un fichier**
+   
    - Nom : `bonjour.php`
    - Emplacement : `C:\xampp\htdocs\bootcamp-php\bonjour.php`
 
@@ -324,7 +348,7 @@ echo "Bonjour tout le monde !";
 
 ```php
 <?php
-// Tout le code PHP doit être entre <?php et ?>
+// Tout le code PHP doit être entre <?php et ?.>
 
 echo "Bonjour tout le monde !";
 // echo affiche du texte à l'écran
@@ -333,6 +357,7 @@ echo "Bonjour tout le monde !";
 ```
 
 **Points importants :**
+
 - `<?php` : Balise d'ouverture PHP (obligatoire)
 - `echo` : Instruction pour afficher du texte
 - `"Bonjour tout le monde !"` : Chaîne de caractères (texte)
@@ -344,11 +369,13 @@ echo "Bonjour tout le monde !";
 ### 📝 Exercice 1 : Afficher votre nom
 
 Créer un fichier `monnom.php` qui affiche :
+
 ```
 Je m'appelle [Votre Nom]
 ```
 
 **Solution :**
+
 ```php
 <?php
 echo "Je m'appelle Hermès";
@@ -379,6 +406,7 @@ Créer `index.php` :
 ```
 
 **Résultat dans le navigateur :**
+
 - L'utilisateur voit le HTML final
 - Le PHP a été exécuté et remplacé par le résultat
 
@@ -404,6 +432,7 @@ PHP peut afficher la date et l'heure actuelles !
 ```
 
 **Explication :**
+
 - `date()` : Fonction PHP pour afficher la date/heure
 - `"d/m/Y"` : Format jour/mois/année
 - `"H:i:s"` : Format heure:minutes:secondes
@@ -434,6 +463,7 @@ echo 20 / 4;
 ```
 
 **Résultat :**
+
 ```
 5 + 3 = 8
 10 - 4 = 6
@@ -468,7 +498,9 @@ echo 20 / 4;
 ## 📚 Devoirs pour Mercredi
 
 ### Exercice 1 : Page de présentation
+
 Créer un fichier `presentation.php` qui affiche :
+
 - Votre nom
 - Votre âge
 - Votre ville
@@ -476,14 +508,18 @@ Créer un fichier `presentation.php` qui affiche :
 - Un calcul de votre choix
 
 ### Exercice 2 : Expérimentation
+
 Essayer de :
+
 - Afficher plusieurs lignes avec `echo`
 - Utiliser `<br>` pour les sauts de ligne
 - Mélanger HTML et PHP dans la même page
 - Changer les formats de date (chercher sur Google : "PHP date format")
 
 ### Exercice 3 : Recherche
+
 Chercher sur internet :
+
 - Quelle est la différence entre `echo` et `print` ?
 - À quoi sert la fonction `phpinfo()` ?
 - Tester `phpinfo()` et observer le résultat

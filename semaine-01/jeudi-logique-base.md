@@ -57,6 +57,7 @@ echo $a ** $b; // Puissance : 1000 (10³)
 ```
 
 **Le modulo `%` expliqué :**
+
 ```php
 <?php
 echo 10 % 3;  // Affiche 1 (10 ÷ 3 = 3 reste 1)
@@ -159,12 +160,12 @@ if (!$pluie) {
 
 **Table de vérité :**
 
-| A | B | A && B | A \|\| B | !A |
-|---|---|--------|----------|-----|
-| true | true | true | true | false |
-| true | false | false | true | false |
-| false | true | false | true | true |
-| false | false | false | false | true |
+| A     | B     | A && B | A \|\| B | !A    |
+| ----- | ----- | ------ | -------- | ----- |
+| true  | true  | true   | true     | false |
+| true  | false | false  | true     | false |
+| false | true  | false  | true     | true  |
+| false | false | false  | false    | true  |
 
 ---
 
@@ -254,6 +255,7 @@ if ($age >= 18) {
 ```
 
 **Syntaxe :**
+
 ```php
 if (condition) {
     // Code exécuté si la condition est vraie
@@ -277,6 +279,7 @@ if ($age >= 18) {
 ```
 
 **Organigramme :**
+
 ```
         ┌─────────────┐
         │ age >= 18 ? │
@@ -371,6 +374,7 @@ if ($age >= 18) {
 ```
 
 **Mieux : Simplifier avec des conditions multiples**
+
 ```php
 <?php
 if ($age >= 18 && $permis && $voiture) {
@@ -482,6 +486,7 @@ echo "Mention : $mention";
 ### 🔹 if/elseif vs switch
 
 **Utilisez `if/elseif` quand :**
+
 - Vous avez des conditions complexes
 - Vous comparez des plages de valeurs
 - Vous utilisez des opérateurs de comparaison
@@ -500,6 +505,7 @@ if ($age < 12) {
 ```
 
 **Utilisez `switch` quand :**
+
 - Vous comparez une variable à plusieurs valeurs exactes
 - Vous avez beaucoup de cas à tester
 - Les valeurs sont des constantes
@@ -532,10 +538,12 @@ switch ($langue) {
 **Objectif** : Créer un script qui vérifie si une personne est majeure.
 
 **Consigne** : 
+
 - Variable `$age`
 - Afficher "Majeur" ou "Mineur"
 
 **Solution :**
+
 ```php
 <?php
 $age = 20;
@@ -555,6 +563,7 @@ if ($age >= 18) {
 **Objectif** : Attribuer une mention selon une note.
 
 **Barème :**
+
 - 16-20 : Très bien
 - 14-15 : Bien
 - 12-13 : Assez bien
@@ -562,6 +571,7 @@ if ($age >= 18) {
 - 0-9 : Insuffisant
 
 **Solution :**
+
 ```php
 <?php
 $note = 15;
@@ -587,6 +597,7 @@ if ($note >= 16 && $note <= 20) {
 **Objectif** : Déterminer si un nombre est pair ou impair.
 
 **Solution :**
+
 ```php
 <?php
 $nombre = 7;
@@ -606,6 +617,7 @@ if ($nombre % 2 === 0) {
 **Objectif** : Trouver le plus grand de trois nombres.
 
 **Solution :**
+
 ```php
 <?php
 $a = 10;
@@ -629,6 +641,7 @@ if ($a >= $b && $a >= $c) {
 **Objectif** : Afficher un message selon le jour de la semaine.
 
 **Solution :**
+
 ```php
 <?php
 $jour = "Mercredi";
@@ -663,6 +676,7 @@ switch ($jour) {
 **Objectif** : Créer une calculatrice avec switch.
 
 **Solution :**
+
 ```php
 <?php
 $nombre1 = 10;
@@ -704,12 +718,14 @@ switch ($operation) {
 **Objectif** : Calculer le tarif d'une place de cinéma.
 
 **Tarifs :**
+
 - Moins de 12 ans : 5 €
 - 12-17 ans : 7 €
 - 18-64 ans : 10 €
 - 65 ans et plus : 6 €
 
 **Solution :**
+
 ```php
 <?php
 $age = 25;
@@ -736,6 +752,7 @@ echo "Votre tarif : $tarif €";
 **Objectif** : Vérifier les droits d'accès selon le rôle.
 
 **Solution :**
+
 ```php
 <?php
 $role = "admin";
@@ -795,6 +812,7 @@ if ($estConnecte) {
 ### Exercice 1 : Saisons
 
 Créez un script `saisons.php` qui :
+
 - Prend un numéro de mois (1-12)
 - Affiche la saison correspondante
   - 3, 4, 5 : Printemps
@@ -806,6 +824,7 @@ Créez un script `saisons.php` qui :
 ### Exercice 2 : Conversion de notes
 
 Créez un script `conversion_notes.php` qui :
+
 - Convertit une note sur 20 en lettre (A, B, C, D, E, F)
   - A : 18-20
   - B : 16-17
@@ -819,6 +838,7 @@ Créez un script `conversion_notes.php` qui :
 Créez un script qui détermine si une année est bissextile.
 
 **Règles :**
+
 - Divisible par 4 → bissextile
 - SAUF si divisible par 100 → non bissextile
 - SAUF si divisible par 400 → bissextile
@@ -828,6 +848,7 @@ Exemples : 2020 (oui), 1900 (non), 2000 (oui)
 ### Exercice 4 : Simulateur de prêt
 
 Créez un script `pret.php` qui :
+
 - Variables : montant du prêt, salaire mensuel
 - Conditions :
   - Si salaire < 1500 € : Prêt refusé
@@ -838,11 +859,13 @@ Créez un script `pret.php` qui :
 ### Exercice 5 : Mini-jeu : Pierre/Papier/Ciseaux
 
 Créez un script `jeu.php` qui :
+
 - Deux variables : $joueur1 et $joueur2 (valeurs: "pierre", "papier", "ciseaux")
 - Détermine le gagnant selon les règles
 - Affiche le résultat
 
 **Règles :**
+
 - Pierre bat Ciseaux
 - Ciseaux bat Papier
 - Papier bat Pierre
@@ -852,6 +875,7 @@ Créez un script `jeu.php` qui :
 ## 🔗 Ressources complémentaires
 
 ### Documentation
+
 - 📖 Opérateurs PHP : https://www.php.net/manual/fr/language.operators.php
 - 📖 Structures de contrôle : https://www.php.net/manual/fr/language.control-structures.php
 - 📖 Switch : https://www.php.net/manual/fr/control-structures.switch.php
@@ -880,6 +904,7 @@ R : C'est le modulo, il donne le reste d'une division entière.
 ## 🎓 Mini-quiz de fin de séance
 
 **Question 1** : Quelle est la sortie ?
+
 ```php
 <?php
 $x = 5;
@@ -891,12 +916,14 @@ if ($x > 3 && $y < 15) {
 }
 ?>
 ```
+
 <details>
 <summary>Voir la réponse</summary>
 Réponse : A (les deux conditions sont vraies)
 </details>
 
 **Question 2** : Trouvez l'erreur :
+
 ```php
 <?php
 $jour = "Lundi";
@@ -909,12 +936,14 @@ switch ($jour) {
 }
 ?>
 ```
+
 <details>
 <summary>Voir la réponse</summary>
 Réponse : Manque break après "Bon lundi", affichera "Bon lundiBon mardi"
 </details>
 
 **Question 3** : Que fait ce code ?
+
 ```php
 <?php
 $age = 20;
@@ -922,6 +951,7 @@ $statut = ($age >= 18) ? "Majeur" : "Mineur";
 echo $statut;
 ?>
 ```
+
 <details>
 <summary>Voir la réponse</summary>
 Réponse : Affiche "Majeur" (opérateur ternaire)

@@ -21,22 +21,26 @@ Ce repository contient tous les supports, exercices et projets du bootcamp PHP &
 ### Durée : 8 à 12 semaines
 
 **Rythme hebdomadaire :**
+
 - 📚 **Cours** : Lundi, Mercredi, Jeudi (3h par séance)
 - 💻 **Travaux pratiques** : Mardi, Vendredi, Week-end
 
 ### 🗓️ Programme détaillé
 
 #### Phase 1 : Bases du Web Dynamique & PHP (Semaines 1-4)
+
 - **Semaine 1** : Introduction au web dynamique & PHP
 - **Semaine 2** : Structures de contrôle & formulaires
 - **Semaine 3** : Fonctions & PHP avancé
 - **Semaine 4** : PHP & MySQL (PDO)
 
 #### Phase 2 : Programmation Orientée Objet & MVC (Semaines 5-6)
+
 - **Semaine 5** : PHP Orienté Objet
 - **Semaine 6** : Architecture MVC & sécurité
 
 #### Phase 3 : Laravel (Semaines 7-11)
+
 - **Semaine 7** : Introduction à Laravel
 - **Semaine 8** : Routing, Controllers & Views
 - **Semaine 9** : Base de données avec Eloquent
@@ -44,6 +48,7 @@ Ce repository contient tous les supports, exercices et projets du bootcamp PHP &
 - **Semaine 11** : Projet final
 
 #### Semaine 12 (optionnelle)
+
 - Finalisation & évaluation des projets
 
 ## 🚀 Projets
@@ -51,12 +56,14 @@ Ce repository contient tous les supports, exercices et projets du bootcamp PHP &
 ### Projet fil rouge recommandé : Gestion d'utilisateurs
 
 Un projet qui évolue tout au long du bootcamp :
+
 1. **Phase PHP** : Formulaire d'inscription simple
 2. **PHP + MySQL** : CRUD utilisateurs complet
 3. **PHP POO & MVC** : Architecture propre et sécurisée
 4. **Laravel** : Application complète avec authentification et rôles
 
 ### Autres projets possibles
+
 - 📝 Blog dynamique avec système de commentaires
 - ✅ Application de gestion de tâches (Todo App)
 - 📅 Système de réservation simple
@@ -96,6 +103,7 @@ learn-php/
 ## 🎓 Certification
 
 Les projets sont évalués sur la base de :
+
 - Fonctionnalités implémentées
 - Qualité du code
 - Sécurité
