@@ -39,6 +39,7 @@ Une **boucle** est une structure de contrôle qui permet de répéter un bloc de
 ### Pourquoi Utiliser des Boucles ?
 
 **Sans boucle** (répétitif et inefficace) :
+
 ```php
 <?php
 echo "Ligne 1<br>";
@@ -51,6 +52,7 @@ echo "Ligne 5<br>";
 ```
 
 **Avec une boucle** (élégant et flexible) :
+
 ```php
 <?php
 for ($i = 1; $i <= 5; $i++) {
@@ -61,12 +63,12 @@ for ($i = 1; $i <= 5; $i++) {
 
 ### Types de Boucles en PHP
 
-| Boucle | Usage Principal | Quand l'Utiliser |
-|--------|----------------|------------------|
-| `for` | Nombre d'itérations connu | Compteurs, tableaux avec indices |
-| `while` | Condition testée avant | Tant qu'une condition est vraie |
-| `do-while` | Condition testée après | Au moins une exécution garantie |
-| `foreach` | Parcours de tableaux | Tableaux associatifs et indexés |
+| Boucle     | Usage Principal           | Quand l'Utiliser                 |
+| ---------- | ------------------------- | -------------------------------- |
+| `for`      | Nombre d'itérations connu | Compteurs, tableaux avec indices |
+| `while`    | Condition testée avant    | Tant qu'une condition est vraie  |
+| `do-while` | Condition testée après    | Au moins une exécution garantie  |
+| `foreach`  | Parcours de tableaux      | Tableaux associatifs et indexés  |
 
 ### Diagramme Conceptuel
 
@@ -117,6 +119,7 @@ for (initialisation; condition; incrémentation) {
 ```
 
 **Composants :**
+
 1. **Initialisation** : Exécutée une seule fois au début
 2. **Condition** : Testée avant chaque itération
 3. **Incrémentation** : Exécutée après chaque itération
@@ -265,6 +268,7 @@ for ($i = 1; $i <= $hauteur; $i++) {
 ### La Boucle `while`
 
 **Syntaxe :**
+
 ```php
 while (condition) {
     // Code à répéter
@@ -309,16 +313,16 @@ $index = 0;
 while (!$trouve && $index < count($essais)) {
     $tentative++;
     $essai = $essais[$index];
-    
+
     echo "Tentative $tentative : $essai<br>";
-    
+
     if ($essai == $nombre_secret) {
         echo "✅ Bravo ! Vous avez trouvé en $tentative tentatives !<br>";
         $trouve = true;
     } else {
         echo "❌ Raté ! Essayez encore.<br>";
     }
-    
+
     $index++;
 }
 ?>
@@ -343,6 +347,7 @@ if ($fichier) {
 ### La Boucle `do-while`
 
 **Syntaxe :**
+
 ```php
 do {
     // Code à répéter
@@ -411,12 +416,12 @@ do {
     echo "1. Option A<br>";
     echo "2. Option B<br>";
     echo "3. Quitter<br>";
-    
+
     // Simuler un choix utilisateur
     $choix = ($iteration < 3) ? $iteration : 3;
-    
+
     echo "Choix simulé : $choix<br>";
-    
+
     switch ($choix) {
         case 1:
             echo "→ Vous avez choisi l'option A<br><br>";
@@ -429,7 +434,7 @@ do {
             $continuer = false;
             break;
     }
-    
+
 } while ($continuer);
 ?>
 ```
@@ -565,7 +570,7 @@ echo "<tr><th>Nom</th><th>Prénom</th><th>Note</th><th>Statut</th></tr>";
 
 foreach ($etudiants as $etudiant) {
     $statut = $etudiant["note"] >= 15 ? "✅ Admis" : "❌ Refusé";
-    
+
     echo "<tr>";
     echo "<td>{$etudiant['nom']}</td>";
     echo "<td>{$etudiant['prenom']}</td>";
@@ -640,7 +645,7 @@ echo "<tr><th>Produit</th><th>Prix Unitaire</th><th>Quantité</th><th>Sous-total
 foreach ($panier as $article) {
     $sous_total = $article["prix"] * $article["quantite"];
     $total_general += $sous_total;
-    
+
     echo "<tr>";
     echo "<td>{$article['produit']}</td>";
     echo "<td>" . number_format($article['prix'], 2) . " €</td>";
@@ -685,11 +690,11 @@ echo "<h4>🛍️ Catalogue de Produits</h4>";
 foreach ($categories as $categorie => $produits) {
     echo "<h5>$categorie :</h5>";
     echo "<ul>";
-    
+
     foreach ($produits as $produit) {
         echo "<li>$produit</li>";
     }
-    
+
     echo "</ul>";
 }
 ?>
@@ -709,12 +714,12 @@ echo "<h4>Recherche du nombre 7 :</h4>";
 
 for ($i = 1; $i <= 10; $i++) {
     echo "Vérification de $i... ";
-    
+
     if ($i == 7) {
         echo "<strong>TROUVÉ ! Arrêt de la recherche.</strong><br>";
         break; // Sort de la boucle
     }
-    
+
     echo "Pas encore trouvé.<br>";
 }
 
@@ -745,7 +750,7 @@ for ($i = 1; $i <= 10; $i++) {
     if ($i % 2 != 0) {
         continue; // Sauter les nombres impairs
     }
-    
+
     echo "$i ";
 }
 
@@ -778,12 +783,12 @@ foreach ($utilisateurs as $user) {
     if (!$user["actif"]) {
         continue;
     }
-    
+
     // Ignorer les mineurs
     if ($user["age"] < 18) {
         continue;
     }
-    
+
     echo "<li>✅ {$user['nom']} - {$user['age']} ans</li>";
 }
 
@@ -814,7 +819,7 @@ $trouve = false;
 foreach ($matrice as $ligne_index => $ligne) {
     foreach ($ligne as $colonne_index => $valeur) {
         echo "Vérification [$ligne_index][$colonne_index] = $valeur<br>";
-        
+
         if ($valeur == $recherche) {
             echo "<strong>✅ Trouvé à la position [$ligne_index][$colonne_index]</strong><br>";
             $trouve = true;
@@ -942,12 +947,12 @@ for ($i = 1; $i <= $hauteur; $i++) {
     for ($j = 1; $j <= ($hauteur - $i); $j++) {
         echo " ";
     }
-    
+
     // Étoiles
     for ($k = 1; $k <= (2 * $i - 1); $k++) {
         echo "*";
     }
-    
+
     echo "\n";
 }
 
@@ -1047,6 +1052,7 @@ Moyenne : 12.14/20
 ### Exercice 7 : FizzBuzz ⭐⭐⭐
 
 **Objectif :** Afficher les nombres de 1 à 30, en remplaçant :
+
 - Les multiples de 3 par "Fizz"
 - Les multiples de 5 par "Buzz"
 - Les multiples de 3 ET 5 par "FizzBuzz"
@@ -1111,9 +1117,9 @@ $jour_actuel = $premier_jour;
 for ($jour = 1; $jour <= $jours_mois; $jour++) {
     // Style spécial pour le dimanche
     $style = ($jour_actuel == 7) ? "style='background-color: #ffcccc;'" : "";
-    
+
     echo "<td $style>$jour</td>";
-    
+
     // Nouvelle ligne après le dimanche
     if ($jour_actuel == 7) {
         echo "</tr><tr>";
@@ -1142,18 +1148,19 @@ echo "</table>";
 
 ### Tableau Comparatif
 
-| Critère | `for` | `while` | `do-while` | `foreach` |
-|---------|-------|---------|------------|-----------|
-| **Usage principal** | Itérations fixes | Condition variable | Au moins 1 exécution | Parcours de tableaux |
-| **Test condition** | Avant itération | Avant itération | Après itération | Automatique |
-| **Syntaxe** | Compacte | Simple | Simple | Très simple |
-| **Compteur** | Intégré | Manuel | Manuel | Automatique |
-| **Tableaux** | Possible (indices) | Possible | Possible | Idéal |
-| **Lisibilité** | ★★★★☆ | ★★★☆☆ | ★★★☆☆ | ★★★★★ |
+| Critère             | `for`              | `while`            | `do-while`           | `foreach`            |
+| ------------------- | ------------------ | ------------------ | -------------------- | -------------------- |
+| **Usage principal** | Itérations fixes   | Condition variable | Au moins 1 exécution | Parcours de tableaux |
+| **Test condition**  | Avant itération    | Avant itération    | Après itération      | Automatique          |
+| **Syntaxe**         | Compacte           | Simple             | Simple               | Très simple          |
+| **Compteur**        | Intégré            | Manuel             | Manuel               | Automatique          |
+| **Tableaux**        | Possible (indices) | Possible           | Possible             | Idéal                |
+| **Lisibilité**      | ★★★★☆              | ★★★☆☆              | ★★★☆☆                | ★★★★★                |
 
 ### Quand Utiliser Quelle Boucle ?
 
 #### Utilisez `for` quand :
+
 - ✅ Vous connaissez le nombre d'itérations à l'avance
 - ✅ Vous avez besoin d'un compteur
 - ✅ Vous parcourez un tableau par indices
@@ -1163,6 +1170,7 @@ for ($i = 0; $i < 10; $i++) { /* ... */ }
 ```
 
 #### Utilisez `while` quand :
+
 - ✅ La condition est dynamique
 - ✅ Vous ne connaissez pas le nombre d'itérations
 - ✅ Vous lisez des données jusqu'à une condition
@@ -1172,6 +1180,7 @@ while ($donnee = lire_donnee()) { /* ... */ }
 ```
 
 #### Utilisez `do-while` quand :
+
 - ✅ Vous devez exécuter le code AU MOINS UNE FOIS
 - ✅ Menu interactif
 - ✅ Validation de saisie
@@ -1181,6 +1190,7 @@ do { /* ... */ } while ($reessayer);
 ```
 
 #### Utilisez `foreach` quand :
+
 - ✅ Vous parcourez un tableau (simple ou associatif)
 - ✅ Vous ne vous souciez pas des indices
 - ✅ Vous voulez un code simple et lisible
@@ -1196,6 +1206,7 @@ foreach ($tableau as $valeur) { /* ... */ }
 ### Q1 : Quelle est la différence entre `$i++` et `++$i` ?
 
 **Réponse :**
+
 - `$i++` : **Post-incrémentation** - retourne la valeur PUIS incrémente
 - `++$i` : **Pré-incrémentation** - incrémente PUIS retourne la valeur
 
@@ -1218,6 +1229,7 @@ Dans une boucle `for`, les deux sont équivalents car la valeur n'est pas utilis
 ### Q2 : Comment éviter les boucles infinies ?
 
 **Réponse :**
+
 1. Toujours s'assurer que la condition peut devenir fausse
 2. Vérifier que le compteur/variable est modifié dans la boucle
 3. Utiliser un compteur de sécurité si nécessaire
@@ -1249,6 +1261,7 @@ while ($i < 10 && $max_iterations > 0) {
 ### Q3 : Puis-je modifier un tableau pendant que je le parcours avec `foreach` ?
 
 **Réponse :**
+
 - ❌ **Ne jamais modifier la structure** (ajouter/supprimer des éléments)
 - ✅ **Possible de modifier les valeurs** avec la référence `&`
 
@@ -1276,6 +1289,7 @@ foreach ($fruits as $fruit) {
 ### Q4 : `break` vs `return` dans une boucle ?
 
 **Réponse :**
+
 - `break` : Sort de la boucle, continue l'exécution du script
 - `return` : Sort de la fonction entière
 
@@ -1331,6 +1345,7 @@ foreach ($personnes as $nom => $age) {
 ## 🎯 Mini-Quiz
 
 ### Question 1
+
 Quelle boucle est la MEILLEURE pour afficher tous les éléments d'un tableau associatif ?
 
 A) `for`  
@@ -1344,11 +1359,13 @@ D) `do-while`
 **Réponse : C) `foreach`**
 
 `foreach` est spécialement conçu pour parcourir les tableaux, qu'ils soient indexés ou associatifs. C'est la solution la plus simple et lisible.
+
 </details>
 
 ---
 
 ### Question 2
+
 Combien de fois ce code s'exécute-t-il ?
 
 ```php
@@ -1371,11 +1388,13 @@ D) 10 fois
 **Réponse : B) 1 fois**
 
 `do-while` exécute le code AU MOINS UNE FOIS avant de tester la condition. Même si la condition est fausse dès le départ, le code s'exécute une fois.
+
 </details>
 
 ---
 
 ### Question 3
+
 Que fait cette instruction : `break 2;` ?
 
 A) Sort de la boucle actuelle  
@@ -1389,11 +1408,13 @@ D) Provoque une erreur
 **Réponse : B) Sort de 2 boucles imbriquées**
 
 `break` peut prendre un argument numérique pour sortir de plusieurs niveaux de boucles imbriquées. `break 2` sort de 2 boucles.
+
 </details>
 
 ---
 
 ### Question 4
+
 Quelle est la sortie de ce code ?
 
 ```php
@@ -1416,11 +1437,13 @@ D) `0 1`
 **Réponse : B) `0 1 3 4`**
 
 `continue` saute l'itération actuelle. Quand `$i` vaut 2, l'itération est sautée et on passe directement à `$i = 3`.
+
 </details>
 
 ---
 
 ### Question 5
+
 Comment modifier les valeurs d'un tableau avec `foreach` ?
 
 A) C'est impossible  
@@ -1434,6 +1457,7 @@ D) Utiliser `foreach ($tab => $val)`
 **Réponse : C) Utiliser `foreach ($tab as &$val)`**
 
 Le symbole `&` crée une référence, permettant de modifier directement les valeurs du tableau original. N'oubliez pas `unset($val)` après la boucle !
+
 </details>
 
 ---
@@ -1445,9 +1469,11 @@ Le symbole `&` crée une référence, permettant de modifier directement les val
 Créez un programme qui calcule la factorielle d'un nombre donné.
 
 **Exemple :**
+
 - Factorielle de 5 : 5! = 5 × 4 × 3 × 2 × 1 = 120
 
 **Indications :**
+
 - Utilisez une boucle `for` ou `while`
 - Testez avec différents nombres (0, 1, 5, 10)
 
@@ -1456,6 +1482,7 @@ Créez un programme qui calcule la factorielle d'un nombre donné.
 ### Devoir 2 : Analyseur de Texte ⭐⭐⭐
 
 Créez un programme qui analyse un texte et affiche :
+
 - Le nombre total de caractères
 - Le nombre de voyelles
 - Le nombre de consonnes
@@ -1463,6 +1490,7 @@ Créez un programme qui analyse un texte et affiche :
 - Le nombre de chiffres
 
 **Texte à analyser :**
+
 ```
 "PHP 8 est un langage puissant pour le développement web en 2026 !"
 ```
@@ -1481,6 +1509,7 @@ Créez un système de gestion de produits avec les fonctionnalités suivantes :
 6. Afficher les produits en rupture de stock (quantité = 0)
 
 **Exemple de structure :**
+
 ```php
 $produits = [
     ["nom" => "Laptop", "prix" => 999, "stock" => 5],
@@ -1495,6 +1524,7 @@ $produits = [
 ### Devoir 4 : Jeu du Plus ou Moins ⭐⭐⭐
 
 Créez un jeu où :
+
 1. Le programme génère un nombre aléatoire entre 1 et 100
 2. L'utilisateur a 7 tentatives pour le deviner
 3. Après chaque essai, afficher "Plus grand" ou "Plus petit"
@@ -1509,6 +1539,7 @@ Créez un jeu où :
 Créez un programme qui affiche les motifs suivants :
 
 **Motif 1 - Losange :**
+
 ```
    *
   ***
@@ -1520,6 +1551,7 @@ Créez un programme qui affiche les motifs suivants :
 ```
 
 **Motif 2 - Sapin de Noël :**
+
 ```
     *
    ***
@@ -1534,6 +1566,7 @@ Créez un programme qui affiche les motifs suivants :
 ## 📖 Ressources Complémentaires
 
 ### Documentation Officielle
+
 - [PHP: for](https://www.php.net/manual/fr/control-structures.for.php)
 - [PHP: while](https://www.php.net/manual/fr/control-structures.while.php)
 - [PHP: foreach](https://www.php.net/manual/fr/control-structures.foreach.php)
@@ -1541,11 +1574,13 @@ Créez un programme qui affiche les motifs suivants :
 - [PHP: continue](https://www.php.net/manual/fr/control-structures.continue.php)
 
 ### Tutoriels Recommandés
+
 - W3Schools : PHP Loops
 - PHP.net : Control Structures
 - MDN : Loops and iteration
 
 ### Outils de Pratique
+
 - [PHP Sandbox](https://sandbox.onlinephpfunctions.com/)
 - [PHPFiddle](http://phpfiddle.org/)
 - [3v4l.org](https://3v4l.org/) - Test PHP sur plusieurs versions
@@ -1555,6 +1590,7 @@ Créez un programme qui affiche les motifs suivants :
 ## 🎓 Points Clés à Retenir
 
 ### ✅ À Faire
+
 - Choisir la boucle appropriée selon le contexte
 - Toujours vérifier que la condition de sortie est atteignable
 - Utiliser `foreach` pour les tableaux quand c'est possible
@@ -1562,6 +1598,7 @@ Créez un programme qui affiche les motifs suivants :
 - Indenter correctement le code dans les boucles
 
 ### ❌ À Éviter
+
 - Les boucles infinies non intentionnelles
 - Modifier la structure d'un tableau pendant `foreach`
 - Oublier d'incrémenter le compteur dans `while`
@@ -1582,6 +1619,7 @@ Vous avez terminé la leçon sur les boucles en PHP ! Vous maîtrisez maintenant
 ### 📅 Prochaine Séance
 
 **Mardi : Les Fonctions en PHP**
+
 - Déclaration et appel de fonctions
 - Paramètres et valeurs de retour
 - Portée des variables (scope)
@@ -1596,6 +1634,7 @@ Vous avez terminé la leçon sur les boucles en PHP ! Vous maîtrisez maintenant
 ---
 
 **Notes du formateur :**
+
 - Temps estimé par section respecté ✅
 - 8 exercices progressifs avec solutions ✅
 - FAQ complète ✅
